@@ -67,11 +67,11 @@ type(spectrum_type) :: spec
 spec = spectrum_type(fmin=0.04,fmax=2.,df=1.1,ndirs=1,depth=1000.)
 
 ! assign a JONSWAP-shape spectrum to the instance
-spec = jonswap(spec1d % getFrequency(),wspd=10.,fetch=1e5,grav=9.8)
+spec = jonswap(spec % getFrequency(),wspd=10.,fetch=1e5,grav=9.8)
 ```
 
-Above example work with default precision (`REAL32`). 
-To write code that is independent of the precision specified at
+Above examples will work with default precision (`REAL32`). 
+To write code that is always compatible with precision specified at 
 build time, use `mod_precision` module:
 
 ```fortran
@@ -86,10 +86,9 @@ spec = spectrum_type(fmin=0.04_rk,fmax=2._rk,df=1.1_rk,ndirs=1,depth=1000._rk)
 
 ! assign a JONSWAP-shape spectrum to the instance
 spec = jonswap(spec % getFrequency(),wspd=10._rk,fetch=1e5_rk,grav=9.8_rk)
-
 ``` 
 There are many pre-built diagnostics that can be output from a `spectrum`
-instance, here is a taste of it:
+instance, here is a taste of a few:
 
 ```fortran
 write(*,*)'Significant wave height [m]: ',spec % significantWaveHeight()
@@ -103,7 +102,6 @@ outputs:
         Mean wave period [s]:    5.20506239    
        Mean square slope [-]:    2.39831898E-02
           Stokes drift [m/s]:    4.87080999E-02
-
 ```
 
 ### Design principles
