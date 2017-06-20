@@ -1,0 +1,9 @@
+[submodule "src/external/json-fortran"]
+	path = src/external/json-fortran
+	url = https://github.com/jacobwilliams/json-fortran
+[submodule "src/external/functional-fortran"]
+	path = src/external/functional-fortran
+	url = https://github.com/wavebitscientific/functional-fortran
+[submodule "src/external/datetime-fortran"]
+	path = src/external/datetime-fortran
+	url = https://github.com/wavebitscientific/datetime-fortran
