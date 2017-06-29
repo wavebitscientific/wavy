@@ -35,6 +35,8 @@ or:
 FC=gfortran cmake .. -DREAL=128 # for quad precision
 ```
 
+wavy needs gcc-6.3.0 or later to succesfully build and pass all tests.
+
 #### Examples
 
 Initialize a omnidirectional spectrum instance in the frequency range from 
