@@ -8,6 +8,7 @@ A spectral ocean wave modeling framework.
   - [Examples](#examples)
 * [Design principles](#design-principles)
 * [Features](#features)
+* [API Documentation](#api-documentation)
 * [Development status](#development-status)
 
 ### Getting started
@@ -183,6 +184,10 @@ outputs:
 * Input/Output:
     - [ ] NetCDF
     - [x] JSON
+
+### API Documentation
+
+Full API documentation is available [here](https://wavebitscientific.github.io/wavy).
 
 ### Development status
 
