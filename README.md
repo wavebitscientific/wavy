@@ -122,7 +122,7 @@ outputs:
 
   * Pure Fortran goodness
   * Object-oriented for high-level abstractions, functional for the computational kernels
-  * Framework to contruct arbitrary wave models
+  * Framework to construct arbitrary wave models
   * Provides a rich set of source functions, parametric shapes, numerical schemes, and wave diagnostics
   * Easy to use by existing atmosphere and ocean models
   * Supports single (32-bit), double (64-bit), and quadruple (128-bit)  precision floating point arithmetic
@@ -142,7 +142,6 @@ outputs:
     - [ ] Sin, Sds (Tolman and Chalikov, 1996)
     - [ ] Sin, Sds, WAM cycle 4 (Janssen, 2004)
     - [ ] Sin, Sds, (Ardhuin et al., 2010) 
-    - [ ] Snl (Donelan et al., 2012)
     - [ ] Snl, DIA (Hasselmann et al., 1985)
 
 * Parametric spectra:
