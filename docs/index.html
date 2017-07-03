@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="A spectral ocean wave modeling framework">
+    
+    <meta name="author" content="Wavebit Scientific LLC" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> wavy </title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="./js/jquery-2.1.3.min.js"></script>
+    <script src="./js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="./tipuesearch/tipuesearch_content.js"></script>
+    <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="./tipuesearch/tipuesearch_set.js"></script>
+    <script src="./tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">wavy </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="./lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="./lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="./lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="./lists/types.html">Derived Types</a></li>
+				
+				
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/types.html">Derived Types</a></li>
+
+
+          </ul>
+        
+        <form action="./search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <p>A spectral ocean wave modeling framework</p>
+        	 
+	<p> Find us on&hellip;</p>
+        <p>
+        	 
+          <a class="btn btn-lg btn-primary" href="https://github.com/wavebitscientific/wavy" role="button">GitHub</a>
+			 
+			 
+			 
+			 
+          <a class="btn btn-lg btn-primary" href="http://wavebitscientific.com" role="button">The Web</a>
+			 
+	         
+			 
+        </p>
+      </div>
+
+      <div class="row" id='text'>
+		  
+        <div class="col-md-8">
+		  
+          <h1>wavy</h1>
+          <h2>wavy</h2>
+<p>A spectral ocean wave modeling framework.</p>
+<ul>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#building-wavy">Building wavy</a></li>
+<li><a href="#building-a-simple-program-with-wavy">Building a simple program with wavy</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#design-principles">Design principles</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#development-status">Development status</a></li>
+</ul>
+<h3>Getting started</h3>
+<h4>Building wavy</h4>
+<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/wavebitscientific/wavy.git
+FC=gfortran make
+mkdir build
+cd build
+FC=gfortran cmake ..
+make
+ctest
+</pre></div>
+
+
+<p>Change the <code>FC</code> value if building with a different Fortran compiler.</p>
+<p>By default, wavy will be built in single precision (32-bit reals).
+To build it in double (64-bit reals) or quadruple precision (128-bit reals),
+use the <code>-DREAL</code> argument when invoking <code>cmake</code>:</p>
+<div class="codehilite"><pre><span></span>FC=gfortran cmake .. -DREAL=64 # for double precision
+</pre></div>
+
+
+<p>or:</p>
+<div class="codehilite"><pre><span></span>FC=gfortran cmake .. -DREAL=128 # for quad precision
+</pre></div>
+
+
+<p>wavy needs gcc-6.3.0 or later to succesfully build and pass all tests.</p>
+<h4>Building a simple program with wavy</h4>
+<p>If you compiled wavy in <code>wavy/build</code>, then the module files and the library
+are located in <code>wavy/build/include</code> and <code>wavy/build/lib</code>, respectively. 
+For example, if we want to build a simple wavy hello world program from
+the base directory, we could do it like this: </p>
+<div class="codehilite"><pre><span></span>gfortran hello.f90 -o hello -Ibuild/include -Lbuild/lib -lwavy
+</pre></div>
+
+
+<h4>Examples</h4>
+<p>Initialize a omnidirectional spectrum instance in the frequency range from 
+0.04 to 2 Hz with logarithmic increment of 1.1, in mean water depth of 1000 m:</p>
+<div class="codehilite"><pre><span></span><span class="k">use </span><span class="n">mod_spectrum</span><span class="p">,</span><span class="n">only</span><span class="p">:</span><span class="n">spectrum_type</span>
+<span class="k">type</span><span class="p">(</span><span class="n">spectrum_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">spec</span>
+
+<span class="c">! initialize a spectrum instance</span>
+<span class="n">spec</span> <span class="o">=</span> <span class="n">spectrum_type</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span><span class="n">fmax</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span><span class="n">df</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">ndirs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">depth</span><span class="o">=</span><span class="mi">100</span><span class="mf">0.</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Same as above, but directional spectrum with 36 directional bins:</p>
+<div class="codehilite"><pre><span></span><span class="n">spec</span> <span class="o">=</span> <span class="n">spectrum_type</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span><span class="n">fmax</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span><span class="n">df</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">ndirs</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span><span class="n">depth</span><span class="o">=</span><span class="mi">100</span><span class="mf">0.</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Initialize omnidirectional spectrum with JONSWAP shape at wind speed of 10 m/s,
+and fetch of 100 km:</p>
+<div class="codehilite"><pre><span></span><span class="k">use </span><span class="n">mod_spectrum</span><span class="p">,</span><span class="n">only</span><span class="p">:</span><span class="n">spectrum_type</span>
+<span class="k">use </span><span class="n">mod_spectral_shapes</span><span class="p">,</span><span class="n">only</span><span class="p">:</span><span class="n">jonswap</span>
+
+<span class="k">type</span><span class="p">(</span><span class="n">spectrum_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">spec</span>
+
+<span class="c">! initialize a spectrum instance</span>
+<span class="n">spec</span> <span class="o">=</span> <span class="n">spectrum_type</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span><span class="n">fmax</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span><span class="n">df</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">ndirs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">depth</span><span class="o">=</span><span class="mi">100</span><span class="mf">0.</span><span class="p">)</span>
+
+<span class="c">! assign a JONSWAP-shape spectrum to the instance</span>
+<span class="n">spec</span> <span class="o">=</span> <span class="n">jonswap</span><span class="p">(</span><span class="n">spec</span> <span class="p">%</span> <span class="n">getFrequency</span><span class="p">(),</span><span class="n">wspd</span><span class="o">=</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="n">fetch</span><span class="o">=</span><span class="err">1</span><span class="n">e5</span><span class="p">,</span><span class="n">grav</span><span class="o">=</span><span class="mf">9.8</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Above examples will work with default precision (<code>REAL32</code>). 
+To write code that is always compatible with precision specified at 
+build time, use <code>mod_precision</code> module:</p>
+<div class="codehilite"><pre><span></span><span class="k">use </span><span class="n">mod_precision</span><span class="p">,</span><span class="n">only</span><span class="p">:</span><span class="n">rk</span> <span class="o">=&gt;</span> <span class="n">realkind</span>
+<span class="k">use </span><span class="n">mod_spectrum</span><span class="p">,</span><span class="n">only</span><span class="p">:</span><span class="n">spectrum_type</span>
+<span class="k">use </span><span class="n">mod_spectral_shapes</span><span class="p">,</span><span class="n">only</span><span class="p">:</span><span class="n">jonswap</span>
+
+<span class="k">type</span><span class="p">(</span><span class="n">spectrum_type</span><span class="p">)</span> <span class="kd">::</span> <span class="n">spec</span>
+
+<span class="c">! initialize a spectrum instance</span>
+<span class="n">spec</span> <span class="o">=</span> <span class="n">spectrum_type</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="mf">0.04_rk</span><span class="p">,</span><span class="n">fmax</span><span class="o">=</span><span class="mf">2._rk</span><span class="p">,</span><span class="n">df</span><span class="o">=</span><span class="mf">1.1_rk</span><span class="p">,</span><span class="n">ndirs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">depth</span><span class="o">=</span><span class="mi">100</span><span class="mf">0._rk</span><span class="p">)</span>
+
+<span class="c">! assign a JONSWAP-shape spectrum to the instance</span>
+<span class="n">spec</span> <span class="o">=</span> <span class="n">jonswap</span><span class="p">(</span><span class="n">spec</span> <span class="p">%</span> <span class="n">getFrequency</span><span class="p">(),</span><span class="n">wspd</span><span class="o">=</span><span class="mi">1</span><span class="mf">0._rk</span><span class="p">,</span><span class="n">fetch</span><span class="o">=</span><span class="err">1</span><span class="n">e5_rk</span><span class="p">,</span><span class="n">grav</span><span class="o">=</span><span class="mf">9.8_rk</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There are many pre-built diagnostics that can be output from a <code>spectrum</code>
+instance, here is a taste of a few:</p>
+<div class="codehilite"><pre><span></span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;Significant wave height [m]: &#39;</span><span class="p">,</span><span class="n">spec</span> <span class="p">%</span> <span class="n">significantWaveHeight</span><span class="p">()</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;       Mean wave period [s]: &#39;</span><span class="p">,</span><span class="n">spec</span> <span class="p">%</span> <span class="n">meanPeriod</span><span class="p">()</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;      Mean square slope [-]: &#39;</span><span class="p">,</span><span class="n">spec</span> <span class="p">%</span> <span class="n">meanSquareSlope</span><span class="p">()</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;         Stokes drift [m/s]: &#39;</span><span class="p">,</span><span class="n">spec</span> <span class="p">%</span> <span class="n">stokesDrift</span><span class="p">([</span><span class="mf">0._rk</span><span class="p">])</span>
+</pre></div>
+
+
+<p>outputs:</p>
+<div class="codehilite"><pre><span></span> Significant wave height [m]:    2.13949418    
+        Mean wave period [s]:    5.20506239    
+       Mean square slope [-]:    2.39831898E-02
+          Stokes drift [m/s]:    4.87080999E-02
+</pre></div>
+
+
+<h3>Design principles</h3>
+<ul>
+<li>Pure Fortran goodness</li>
+<li>Object-oriented for high-level abstractions, functional for the computational kernels</li>
+<li>Framework to contruct arbitrary wave models</li>
+<li>Provides a rich set of source functions, parametric shapes, numerical schemes, and wave diagnostics</li>
+<li>Easy to use by existing atmosphere and ocean models</li>
+<li>Supports single (32-bit), double (64-bit), and quadruple (128-bit)  precision floating point arithmetic</li>
+<li>Self-documented</li>
+<li>Fully unit-tested</li>
+</ul>
+<h3>Features</h3>
+<ul>
+<li>
+<p>Classes:</p>
+<ul>
+<li>[x] Spectrum class: supports omnidirectional and directional spectra</li>
+<li>[x] Grid class: supports regular 1-d and 2-d grids</li>
+<li>[x] Domain class: built from Grid and Spectrum instances.</li>
+</ul>
+</li>
+<li>
+<p>Source functions:</p>
+<ul>
+<li>[x] Sin, Sds, Sdt, Snl, Sbf (Donelan et al., 2012)</li>
+<li>[ ] Sin, Sds, WAM cycle 3 (Komen et al., 1984)</li>
+<li>[ ] Sin, Sds (Tolman and Chalikov, 1996)</li>
+<li>[ ] Sin, Sds, WAM cycle 4 (Janssen, 2004)</li>
+<li>[ ] Sin, Sds, (Ardhuin et al., 2010) </li>
+<li>[ ] Snl (Donelan et al., 2012)</li>
+<li>[ ] Snl, DIA (Hasselmann et al., 1985)</li>
+</ul>
+</li>
+<li>
+<p>Parametric spectra:</p>
+<ul>
+<li>[x] Donelan, Hamilton &amp; Hui (1985)</li>
+<li>[x] JONSWAP (1973)</li>
+<li>[x] Phillips (1956)</li>
+<li>[x] Pierson-Moskowitz (1964)</li>
+</ul>
+</li>
+<li>
+<p>Grid projections:</p>
+<ul>
+<li>[x] Cartesian</li>
+<li>[ ] Spherical</li>
+</ul>
+</li>
+<li>
+<p>Time integration scheme:</p>
+<ul>
+<li>[x] First order, forward Euler (explicit)</li>
+<li>[x] First order, backward Euler (implicit)</li>
+<li>[x] Exact exponential</li>
+</ul>
+</li>
+<li>
+<p>Advection schemes:</p>
+<ul>
+<li>[x] Upwind differences, 1st order, 1-d</li>
+<li>[x] Upwind differences, 1st order, 2-d</li>
+<li>[x] Upwind differences, 2nd order, 1-d</li>
+<li>[x] Upwind differences, 2nd order, 2-d</li>
+<li>[x] Centered differences, 2nd order, 1-d</li>
+<li>[x] Centered differences, 2nd order, 2-d</li>
+<li>[ ] Flux corrected transport (Zalesak, 1979)</li>
+<li>[ ] Smolarkiewitz anti-diffusive velocity scheme (Smolarkiewitz, 1981)</li>
+<li>[ ] MPDATA (Smolarkiewitz, 1983)</li>
+<li>[ ] ULTIMATE QUICKEST (Wavewatch III)</li>
+</ul>
+</li>
+<li>
+<p>Stokes drift:</p>
+<ul>
+<li>[ ] Monochromatic</li>
+<li>[x] Exact</li>
+<li>[ ] Webb and Fox-Kemper (2011)</li>
+<li>[ ] Breivik et al. (2015)</li>
+</ul>
+</li>
+<li>
+<p>Parallel execution:</p>
+<ul>
+<li>[ ] Fortran Coarrays</li>
+</ul>
+</li>
+<li>
+<p>Input/Output:</p>
+<ul>
+<li>[ ] NetCDF</li>
+<li>[x] JSON</li>
+</ul>
+</li>
+</ul>
+<h3>Development status</h3>
+<p>wavy is in early development. Contributors are highly needed,
+especially for implementing source functions. You can start 
+contributing by opening an <a href="https://github.com/wavebitscientific/wavy/issues/new">issue</a>.</p>
+        </div>
+		  
+        <div class="col-md-4">
+	  <div class="well">
+          <h2>Developer Info</h2>
+          <h4>Wavebit Scientific LLC</h4>
+          
+          
+			   
+            <div class="text-center"><div class="btn-group" role="group">
+              
+              <a class="btn btn-lg btn-primary" href="mailto:mcurcic@wavebitscientific.com"><i class="fa fa-envelope fa-lg"></i></a>
+              
+              
+              
+              <a class="btn btn-lg btn-primary" href="https://github.com/wavebitscientific"><i class="fa fa-github fa-lg"></i></a>
+				  
+				  
+              
+              
+              
+              
+            </div></div>
+            
+       </div>
+       </div>
+       
+      </div>
+      
+      
+      
+      
+		
+      <div class="row">
+        <div class="col-xs-6 col-sm-3">
+              <h3>Source Files</h3>
+              <ul>
+                
+                  
+                    <li><a href='./sourcefile/mod_advection.f90.html'>mod_advection.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_const.f90.html'>mod_const.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_domain.f90.html'>mod_domain.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_gravity.f90.html'>mod_gravity.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_grid.f90.html'>mod_grid.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_io.f90.html'>mod_io.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_linear_wave_theory.f90.html'>mod_linear_wave_theory.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_nondimensional.f90.html'>mod_nondimensional.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_precision.f90.html'>mod_precision.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/mod_source_functions.f90.html'>mod_source_functions.f90</a></li>
+                  
+                
+                  
+                    <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+          </div>
+          
+		  <div class="col-xs-6 col-sm-3">
+              <h3>Modules</h3>
+              <ul>
+                
+                  
+                    <li><a href='./module/mod_advection.html'>mod_advection</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_const.html'>mod_const</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_domain.html'>mod_domain</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_gravity.html'>mod_gravity</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_grid.html'>mod_grid</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_io.html'>mod_io</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_linear_wave_theory.html'>mod_linear_wave_theory</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_nondimensional.html'>mod_nondimensional</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_precision.html'>mod_precision</a></li>
+                  
+                
+                  
+                    <li><a href='./module/mod_source_functions.html'>mod_source_functions</a></li>
+                  
+                
+                  
+                    <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+          </div>
+          
+          
+		  <div class="col-xs-6 col-sm-3">
+              <h3>Procedures</h3>
+              <ul>
+                
+                  
+                    <li><a href='./proc/advect1drank1.html'>advect1dRank1</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/advect1drank2.html'>advect1dRank2</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/advect2drank2.html'>advect2dRank2</a></li>
+                  
+                
+                  
+                    <li><a href='./interface/advectcentered2ndorder.html'>advectCentered2ndOrder</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/advectcentered2ndorder1drank0.html'>advectCentered2ndOrder1dRank0</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/advectcentered2ndorder1drank1.html'>advectCentered2ndOrder1dRank1</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/advectcentered2ndorder1drank2.html'>advectCentered2ndOrder1dRank2</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/advectcentered2ndorder2drank0.html'>advectCentered2ndOrder2dRank0</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/advectcentered2ndorder2drank1.html'>advectCentered2ndOrder2dRank1</a></li>
+                  
+                
+                  
+                    <li><a href='./proc/advectcentered2ndorder2drank2.html'>advectCentered2ndOrder2dRank2</a></li>
+                  
+                
+                  
+                    <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+          </div>
+          
+          
+		  <div class="col-xs-6 col-sm-3">
+              <h3>Derived Types</h3>
+              <ul>
+                
+                  
+                    <li><a href='./type/domain_type.html'>domain_type</a></li>
+                  
+                
+                  
+                    <li><a href='./type/grid_type.html'>grid_type</a></li>
+                  
+                
+                  
+                    <li><a href='./type/spectrum_type.html'>spectrum_type</a></li>
+                  
+                
+              </ul>
+          </div>
+          
+      </div>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> wavy was developed by Wavebit Scientific LLC</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

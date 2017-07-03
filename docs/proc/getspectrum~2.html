@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="A spectral ocean wave modeling framework">
+    
+    <meta name="author" content="Wavebit Scientific LLC" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>getSpectrum &ndash; wavy</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">wavy </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>getSpectrum
+      <small>Function</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.2% of total for procedures.">5 statements</a>
+     </li> 
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/mod_spectrum.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/mod_spectrum.f90.html'>mod_spectrum.f90</a></li>
+  
+     <li><a href='../module/mod_spectrum.html'>mod_spectrum</a></li>
+  
+     <li class="active">getSpectrum</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/getspectrum%7E2.html#src">getSpectrum</a>
+  </div>
+</div>
+
+
+  <hr>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-0">All Procedures</a></h3></div>
+  <div id="allprocs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/advect1drank1.html">advect1dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advect1drank2.html">advect1dRank2</a>
+      
+      <a class="list-group-item" href="../proc/advect2drank2.html">advect2dRank2</a>
+      
+      <a class="list-group-item" href="../interface/advectcentered2ndorder.html">advectCentered2ndOrder</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder1drank0.html">advectCentered2ndOrder1dRank0</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder1drank1.html">advectCentered2ndOrder1dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder1drank2.html">advectCentered2ndOrder1dRank2</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder2drank0.html">advectCentered2ndOrder2dRank0</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder2drank1.html">advectCentered2ndOrder2dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder2drank2.html">advectCentered2ndOrder2dRank2</a>
+      
+      <a class="list-group-item" href="../interface/advectupwind1storder.html">advectUpwind1stOrder</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder1drank0.html">advectUpwind1stOrder1dRank0</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder1drank1.html">advectUpwind1stOrder1dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder1drank2.html">advectUpwind1stOrder1dRank2</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder2drank0.html">advectUpwind1stOrder2dRank0</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder2drank1.html">advectUpwind1stOrder2dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder2drank2.html">advectUpwind1stOrder2dRank2</a>
+      
+      <a class="list-group-item" href="../proc/assign_array_1d.html">assign_array_1d</a>
+      
+      <a class="list-group-item" href="../proc/assign_array_2d.html">assign_array_2d</a>
+      
+      <a class="list-group-item" href="../proc/assign_spectrum_array_1d.html">assign_spectrum_array_1d</a>
+      
+      <a class="list-group-item" href="../proc/assign_spectrum_array_2d.html">assign_spectrum_array_2d</a>
+      
+      <a class="list-group-item" href="../interface/backward_euler.html">backward_euler</a>
+      
+      <a class="list-group-item" href="../proc/backward_euler_domain.html">backward_euler_domain</a>
+      
+      <a class="list-group-item" href="../proc/backward_euler_spectrum.html">backward_euler_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/constructor.html">constructor</a>
+      
+      <a class="list-group-item" href="../proc/constructor%7E2.html">constructor</a>
+      
+      <a class="list-group-item" href="../proc/constructor_1d.html">constructor_1d</a>
+      
+      <a class="list-group-item" href="../proc/constructor_2d.html">constructor_2d</a>
+      
+      <a class="list-group-item" href="../interface/diff.html">diff</a>
+      
+      <a class="list-group-item" href="../proc/diff_1d.html">diff_1d</a>
+      
+      <a class="list-group-item" href="../proc/diff_2d.html">diff_2d</a>
+      
+      <a class="list-group-item" href="../interface/diff_periodic.html">diff_periodic</a>
+      
+      <a class="list-group-item" href="../proc/diff_periodic_1d.html">diff_periodic_1d</a>
+      
+      <a class="list-group-item" href="../proc/diff_periodic_2d.html">diff_periodic_2d</a>
+      
+      <a class="list-group-item" href="../proc/domain_add_domain.html">domain_add_domain</a>
+      
+      <a class="list-group-item" href="../proc/domain_add_real.html">domain_add_real</a>
+      
+      <a class="list-group-item" href="../proc/domain_div_domain.html">domain_div_domain</a>
+      
+      <a class="list-group-item" href="../proc/domain_div_real.html">domain_div_real</a>
+      
+      <a class="list-group-item" href="../proc/domain_mult_domain.html">domain_mult_domain</a>
+      
+      <a class="list-group-item" href="../proc/domain_mult_real.html">domain_mult_real</a>
+      
+      <a class="list-group-item" href="../proc/domain_sub_domain.html">domain_sub_domain</a>
+      
+      <a class="list-group-item" href="../proc/domain_sub_real.html">domain_sub_real</a>
+      
+      <a class="list-group-item" href="../interface/domain_type.html">domain_type</a>
+      
+      <a class="list-group-item" href="../proc/domain_unary_minus.html">domain_unary_minus</a>
+      
+      <a class="list-group-item" href="../proc/donelanhamiltonhui.html">donelanHamiltonHui</a>
+      
+      <a class="list-group-item" href="../proc/donelanhamiltonhuidirectionalspectrum.html">donelanHamiltonHuiDirectionalSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/donelanhamiltonhuidirectionalspreading.html">donelanHamiltonHuiDirectionalSpreading</a>
+      
+      <a class="list-group-item" href="../proc/elevation.html">elevation</a>
+      
+      <a class="list-group-item" href="../proc/eq.html">eq</a>
+      
+      <a class="list-group-item" href="../proc/eq%7E2.html">eq</a>
+      
+      <a class="list-group-item" href="../interface/exact_exponential.html">exact_exponential</a>
+      
+      <a class="list-group-item" href="../proc/exact_exponential_domain.html">exact_exponential_domain</a>
+      
+      <a class="list-group-item" href="../proc/exact_exponential_spectrum.html">exact_exponential_spectrum</a>
+      
+      <a class="list-group-item" href="../interface/forward_euler.html">forward_euler</a>
+      
+      <a class="list-group-item" href="../proc/forward_euler_domain.html">forward_euler_domain</a>
+      
+      <a class="list-group-item" href="../proc/forward_euler_spectrum.html">forward_euler_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/frequencymoment.html">frequencyMoment</a>
+      
+      <a class="list-group-item" href="../proc/frequencymoment%7E2.html">frequencyMoment</a>
+      
+      <a class="list-group-item" href="../proc/ge.html">ge</a>
+      
+      <a class="list-group-item" href="../proc/getairdensity.html">getAirDensity</a>
+      
+      <a class="list-group-item" href="../proc/getairdensity%7E2.html">getAirDensity</a>
+      
+      <a class="list-group-item" href="../proc/getamplitude.html">getAmplitude</a>
+      
+      <a class="list-group-item" href="../proc/getaxisx.html">getAxisX</a>
+      
+      <a class="list-group-item" href="../proc/getaxisy.html">getAxisY</a>
+      
+      <a class="list-group-item" href="../proc/getcurrent_u.html">getCurrent_u</a>
+      
+      <a class="list-group-item" href="../proc/getcurrent_u%7E2.html">getCurrent_u</a>
+      
+      <a class="list-group-item" href="../proc/getcurrent_v.html">getCurrent_v</a>
+      
+      <a class="list-group-item" href="../proc/getcurrent_v%7E2.html">getCurrent_v</a>
+      
+      <a class="list-group-item" href="../proc/getdepth.html">getDepth</a>
+      
+      <a class="list-group-item" href="../proc/getdepth%7E2.html">getDepth</a>
+      
+      <a class="list-group-item" href="../proc/getdepthlevels.html">getDepthLevels</a>
+      
+      <a class="list-group-item" href="../proc/getdirections.html">getDirections</a>
+      
+      <a class="list-group-item" href="../proc/getdirections%7E2.html">getDirections</a>
+      
+      <a class="list-group-item" href="../proc/getdirections2d.html">getDirections2d</a>
+      
+      <a class="list-group-item" href="../proc/getelevation.html">getElevation</a>
+      
+      <a class="list-group-item" href="../proc/getelevation%7E2.html">getElevation</a>
+      
+      <a class="list-group-item" href="../proc/getfrequency.html">getFrequency</a>
+      
+      <a class="list-group-item" href="../proc/getfrequency%7E2.html">getFrequency</a>
+      
+      <a class="list-group-item" href="../proc/getfrequency2d.html">getFrequency2d</a>
+      
+      <a class="list-group-item" href="../proc/getgravity.html">getGravity</a>
+      
+      <a class="list-group-item" href="../proc/getgravity%7E2.html">getGravity</a>
+      
+      <a class="list-group-item" href="../proc/getgrid.html">getGrid</a>
+      
+      <a class="list-group-item" href="../proc/getgridrotation.html">getGridRotation</a>
+      
+      <a class="list-group-item" href="../proc/getgridspacingx.html">getGridSpacingX</a>
+      
+      <a class="list-group-item" href="../proc/getgridspacingxwithhalo.html">getGridSpacingXWithHalo</a>
+      
+      <a class="list-group-item" href="../proc/getgridspacingy.html">getGridSpacingY</a>
+      
+      <a class="list-group-item" href="../proc/getgridspacingywithhalo.html">getGridSpacingYWithHalo</a>
+      
+      <a class="list-group-item" href="../proc/getgroupspeed.html">getGroupSpeed</a>
+      
+      <a class="list-group-item" href="../proc/getgroupspeed%7E2.html">getGroupSpeed</a>
+      
+      <a class="list-group-item" href="../proc/getgroupspeed2d.html">getGroupSpeed2d</a>
+      
+      <a class="list-group-item" href="../proc/getlatitude.html">getLatitude</a>
+      
+      <a class="list-group-item" href="../proc/getlongitude.html">getLongitude</a>
+      
+      <a class="list-group-item" href="../proc/getlowerbounds.html">getLowerBounds</a>
+      
+      <a class="list-group-item" href="../proc/getlowerbounds%7E2.html">getLowerBounds</a>
+      
+      <a class="list-group-item" href="../proc/getphasespeed.html">getPhaseSpeed</a>
+      
+      <a class="list-group-item" href="../proc/getphasespeed%7E2.html">getPhaseSpeed</a>
+      
+      <a class="list-group-item" href="../proc/getphasespeed2d.html">getPhaseSpeed2d</a>
+      
+      <a class="list-group-item" href="../proc/getspectrum.html">getSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/getspectrum%7E2.html">getSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/getspectrumarray.html">getSpectrumArray</a>
+      
+      <a class="list-group-item" href="../proc/getsurfacetension.html">getSurfaceTension</a>
+      
+      <a class="list-group-item" href="../proc/getsurfacetension%7E2.html">getSurfaceTension</a>
+      
+      <a class="list-group-item" href="../proc/getupperbounds.html">getUpperBounds</a>
+      
+      <a class="list-group-item" href="../proc/getupperbounds%7E2.html">getUpperBounds</a>
+      
+      <a class="list-group-item" href="../proc/getwaterdensity.html">getWaterDensity</a>
+      
+      <a class="list-group-item" href="../proc/getwaterdensity%7E2.html">getWaterDensity</a>
+      
+      <a class="list-group-item" href="../proc/getwaveaction.html">getWaveAction</a>
+      
+      <a class="list-group-item" href="../proc/getwavelength.html">getWavelength</a>
+      
+      <a class="list-group-item" href="../proc/getwavenumber.html">getWavenumber</a>
+      
+      <a class="list-group-item" href="../proc/getwavenumber2d.html">getWavenumber2d</a>
+      
+      <a class="list-group-item" href="../proc/getwavenumberspacing.html">getWavenumberSpacing</a>
+      
+      <a class="list-group-item" href="../proc/gravityclairaut.html">gravityClairaut</a>
+      
+      <a class="list-group-item" href="../interface/grid_type.html">grid_type</a>
+      
+      <a class="list-group-item" href="../proc/gt.html">gt</a>
+      
+      <a class="list-group-item" href="../proc/horizontalacceleration.html">horizontalAcceleration</a>
+      
+      <a class="list-group-item" href="../proc/horizontalvelocity.html">horizontalVelocity</a>
+      
+      <a class="list-group-item" href="../interface/integrate.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate_domain.html">integrate_domain</a>
+      
+      <a class="list-group-item" href="../proc/integrate_spectrum.html">integrate_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/isallocated.html">isAllocated</a>
+      
+      <a class="list-group-item" href="../proc/isallocated%7E2.html">isAllocated</a>
+      
+      <a class="list-group-item" href="../proc/ismonochromatic.html">isMonochromatic</a>
+      
+      <a class="list-group-item" href="../proc/isomnidirectional.html">isOmnidirectional</a>
+      
+      <a class="list-group-item" href="../proc/jonswap.html">jonswap</a>
+      
+      <a class="list-group-item" href="../proc/jonswappeakfrequency.html">jonswapPeakFrequency</a>
+      
+      <a class="list-group-item" href="../proc/le.html">le</a>
+      
+      <a class="list-group-item" href="../proc/lt.html">lt</a>
+      
+      <a class="list-group-item" href="../proc/meanperiod.html">meanPeriod</a>
+      
+      <a class="list-group-item" href="../proc/meanperiod%7E2.html">meanPeriod</a>
+      
+      <a class="list-group-item" href="../proc/meanperiodzerocrossing.html">meanPeriodZeroCrossing</a>
+      
+      <a class="list-group-item" href="../proc/meanperiodzerocrossing%7E2.html">meanPeriodZeroCrossing</a>
+      
+      <a class="list-group-item" href="../proc/meansquareslope.html">meanSquareSlope</a>
+      
+      <a class="list-group-item" href="../proc/meansquareslopedirectional.html">meanSquareSlopeDirectional</a>
+      
+      <a class="list-group-item" href="../proc/momentum_x.html">momentum_x</a>
+      
+      <a class="list-group-item" href="../proc/momentum_y.html">momentum_y</a>
+      
+      <a class="list-group-item" href="../proc/momentumflux_xx.html">momentumFlux_xx</a>
+      
+      <a class="list-group-item" href="../proc/momentumflux_xy.html">momentumFlux_xy</a>
+      
+      <a class="list-group-item" href="../proc/momentumflux_yy.html">momentumFlux_yy</a>
+      
+      <a class="list-group-item" href="../proc/neq.html">neq</a>
+      
+      <a class="list-group-item" href="../proc/neq%7E2.html">neq</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionaldepth.html">nondimensionalDepth</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalenergy.html">nondimensionalEnergy</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalfetch.html">nondimensionalFetch</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalfrequency.html">nondimensionalFrequency</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalroughness_h1986.html">nondimensionalRoughness_H1986</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalroughness_s1974.html">nondimensionalRoughness_S1974</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionaltime.html">nondimensionalTime</a>
+      
+      <a class="list-group-item" href="../proc/omnidirectionalspectrum.html">omnidirectionalSpectrum</a>
+      
+      <a class="list-group-item" href="../interface/ones.html">ones</a>
+      
+      <a class="list-group-item" href="../proc/ones_int.html">ones_int</a>
+      
+      <a class="list-group-item" href="../proc/ones_real.html">ones_real</a>
+      
+      <a class="list-group-item" href="../proc/peakedness.html">peakedness</a>
+      
+      <a class="list-group-item" href="../proc/peakfrequency.html">peakFrequency</a>
+      
+      <a class="list-group-item" href="../proc/peakfrequencydiscrete.html">peakFrequencyDiscrete</a>
+      
+      <a class="list-group-item" href="../proc/phillips.html">phillips</a>
+      
+      <a class="list-group-item" href="../proc/piersonmoskowitz.html">piersonMoskowitz</a>
+      
+      <a class="list-group-item" href="../proc/piersonmoskowitzpeakfrequency.html">piersonMoskowitzPeakFrequency</a>
+      
+      <a class="list-group-item" href="../proc/pressure.html">pressure</a>
+      
+      <a class="list-group-item" href="../interface/range.html">range</a>
+      
+      <a class="list-group-item" href="../proc/range_int.html">range_int</a>
+      
+      <a class="list-group-item" href="../proc/range_real.html">range_real</a>
+      
+      <a class="list-group-item" href="../proc/readjson.html">readJSON</a>
+      
+      <a class="list-group-item" href="../proc/real2d_mult_spectrum.html">real2d_mult_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/real_add_domain.html">real_add_domain</a>
+      
+      <a class="list-group-item" href="../proc/real_add_spectrum.html">real_add_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/real_div_domain.html">real_div_domain</a>
+      
+      <a class="list-group-item" href="../proc/real_div_spectrum.html">real_div_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/real_mult_domain.html">real_mult_domain</a>
+      
+      <a class="list-group-item" href="../proc/real_mult_spectrum.html">real_mult_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/real_sub_domain.html">real_sub_domain</a>
+      
+      <a class="list-group-item" href="../proc/real_sub_spectrum.html">real_sub_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/saturationspectrum.html">saturationSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/sbf_dccm2012.html">sbf_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/sbf_jonswap.html">sbf_JONSWAP</a>
+      
+      <a class="list-group-item" href="../proc/sds_dccm2012.html">sds_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/sdt_dccm2012.html">sdt_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/setairdensity.html">setAirDensity</a>
+      
+      <a class="list-group-item" href="../proc/setairdensity%7E2.html">setAirDensity</a>
+      
+      <a class="list-group-item" href="../proc/setcurrent1d.html">setCurrent1d</a>
+      
+      <a class="list-group-item" href="../proc/setcurrent2d.html">setCurrent2d</a>
+      
+      <a class="list-group-item" href="../proc/setdepth.html">setDepth</a>
+      
+      <a class="list-group-item" href="../proc/setdepth%7E2.html">setDepth</a>
+      
+      <a class="list-group-item" href="../proc/setelevation.html">setElevation</a>
+      
+      <a class="list-group-item" href="../proc/setelevation%7E2.html">setElevation</a>
+      
+      <a class="list-group-item" href="../proc/setgravity.html">setGravity</a>
+      
+      <a class="list-group-item" href="../proc/setgravity%7E2.html">setGravity</a>
+      
+      <a class="list-group-item" href="../proc/setspectrum1d.html">setSpectrum1d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrum1d%7E2.html">setSpectrum1d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrum2d.html">setSpectrum2d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrum2d%7E2.html">setSpectrum2d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrumarray1d1d.html">setSpectrumArray1d1d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrumarray1d2d.html">setSpectrumArray1d2d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrumarray2d2d.html">setSpectrumArray2d2d</a>
+      
+      <a class="list-group-item" href="../proc/setsurfacetension.html">setSurfaceTension</a>
+      
+      <a class="list-group-item" href="../proc/setsurfacetension%7E2.html">setSurfaceTension</a>
+      
+      <a class="list-group-item" href="../proc/setwaterdensity.html">setWaterDensity</a>
+      
+      <a class="list-group-item" href="../proc/setwaterdensity%7E2.html">setWaterDensity</a>
+      
+      <a class="list-group-item" href="../proc/significantsurfaceorbitalvelocity.html">significantSurfaceOrbitalVelocity</a>
+      
+      <a class="list-group-item" href="../proc/significantwaveheight.html">significantWaveHeight</a>
+      
+      <a class="list-group-item" href="../proc/significantwaveheight%7E2.html">significantWaveHeight</a>
+      
+      <a class="list-group-item" href="../proc/sin_dccm2012.html">sin_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/snl_dccm2012.html">snl_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_add_real.html">spectrum_add_real</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_add_spectrum.html">spectrum_add_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_div_real.html">spectrum_div_real</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_div_spectrum.html">spectrum_div_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_mult_real.html">spectrum_mult_real</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_mult_real2d.html">spectrum_mult_real2d</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_mult_spectrum.html">spectrum_mult_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_sub_real.html">spectrum_sub_real</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_sub_spectrum.html">spectrum_sub_spectrum</a>
+      
+      <a class="list-group-item" href="../interface/spectrum_type.html">spectrum_type</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_unary_minus.html">spectrum_unary_minus</a>
+      
+      <a class="list-group-item" href="../proc/stokesdrift.html">stokesDrift</a>
+      
+      <a class="list-group-item" href="../proc/stokesdrift2d.html">stokesDrift2d</a>
+      
+      <a class="list-group-item" href="../interface/tile.html">tile</a>
+      
+      <a class="list-group-item" href="../proc/tile_1d_int.html">tile_1d_int</a>
+      
+      <a class="list-group-item" href="../proc/tile_1d_real.html">tile_1d_real</a>
+      
+      <a class="list-group-item" href="../proc/tile_2d_int.html">tile_2d_int</a>
+      
+      <a class="list-group-item" href="../proc/tile_2d_real.html">tile_2d_real</a>
+      
+      <a class="list-group-item" href="../proc/tile_3d_int.html">tile_3d_int</a>
+      
+      <a class="list-group-item" href="../proc/tile_3d_real.html">tile_3d_real</a>
+      
+      <a class="list-group-item" href="../proc/ursellnumber.html">ursellNumber</a>
+      
+      <a class="list-group-item" href="../proc/verticalacceleration.html">verticalAcceleration</a>
+      
+      <a class="list-group-item" href="../proc/verticalvelocity.html">verticalVelocity</a>
+      
+      <a class="list-group-item" href="../proc/waveage.html">waveAge</a>
+      
+      <a class="list-group-item" href="../proc/wavenumber.html">wavenumber</a>
+      
+      <a class="list-group-item" href="../proc/wavenumbermoment.html">wavenumberMoment</a>
+      
+      <a class="list-group-item" href="../proc/wavenumbermoment%7E2.html">wavenumberMoment</a>
+      
+      <a class="list-group-item" href="../proc/wavenumberspectrum.html">wavenumberSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/writejson.html">writeJSON</a>
+      
+      <a class="list-group-item" href="../proc/writejson%7E2.html">writeJSON</a>
+      
+      <a class="list-group-item" href="../interface/zeros.html">zeros</a>
+      
+      <a class="list-group-item" href="../proc/zeros_int.html">zeros_int</a>
+      
+      <a class="list-group-item" href="../proc/zeros_real.html">zeros_real</a>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>  
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+private pure function getSpectrum(self) result(spec)
+    
+    
+	 
+</h2>
+    
+  
+
+
+    
+    <p>Returns the spectrum array.</p>
+    
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-self%7E83"></span>class(<a href='../type/spectrum_type.html'>spectrum_type</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Spectrum instance</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    
+    
+    
+    
+	 <h3>Return Value <small><span class="anchor" id="variable-spec%7E5"></span>real(kind=rk),
+  dimension(:,:),allocatable</small></h3>
+    <p>Spectrum array</p>
+    
+    
+     
+     <h3>Called By</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: proc~~getspectrum~2~~CalledByGraph Pages: 1 -->
+<svg id="procgetspectrum2CalledByGraph" width="250pt" height="872pt"
+ viewBox="0.00 0.00 250.00 872.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~getspectrum~2~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 868)">
+<title>proc~~getspectrum~2~~CalledByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-868 246,-868 246,4 -4,4"/>
+<!-- proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node1" class="node"><title>proc~getspectrum~2</title>
+<polygon fill="none" stroke="black" points="242,-444 169,-444 169,-420 242,-420 242,-444"/>
+<text text-anchor="middle" x="205.5" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50">getSpectrum</text>
+</g>
+<!-- proc~spectrum_add_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node2" class="node"><title>proc~spectrum_add_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node2"><a xlink:href="../proc/spectrum_add_spectrum.html" xlink:title="spectrum_add_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="132,-864 1,-864 1,-840 132,-840 132,-864"/>
+<text text-anchor="middle" x="66.5" y="-849.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_add_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_add_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge1" class="edge"><title>proc~spectrum_add_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M122.291,-839.868C126.28,-837.429 129.933,-834.505 133,-831 182.925,-773.954 199.458,-530.34 203.444,-454.577"/>
+<polygon fill="#000000" stroke="#000000" points="206.955,-454.448 203.961,-444.285 199.964,-454.096 206.955,-454.448"/>
+</g>
+<!-- proc~spectrum_mult_real -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node3" class="node"><title>proc~spectrum_mult_real</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node3"><a xlink:href="../proc/spectrum_mult_real.html" xlink:title="spectrum_mult_real">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="120,-822 13,-822 13,-798 120,-798 120,-822"/>
+<text text-anchor="middle" x="66.5" y="-807.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_mult_real</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_mult_real&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge2" class="edge"><title>proc~spectrum_mult_real&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M120.028,-799.061C124.881,-796.399 129.34,-793.097 133,-789 177.876,-738.764 197.589,-524.721 202.932,-454.45"/>
+<polygon fill="#000000" stroke="#000000" points="206.45,-454.334 203.693,-444.104 199.469,-453.82 206.45,-454.334"/>
+</g>
+<!-- proc~real2d_mult_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node4" class="node"><title>proc~real2d_mult_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node4"><a xlink:href="../proc/real2d_mult_spectrum.html" xlink:title="real2d_mult_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="126,-780 7,-780 7,-756 126,-756 126,-780"/>
+<text text-anchor="middle" x="66.5" y="-765.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">real2d_mult_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~real2d_mult_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge3" class="edge"><title>proc~real2d_mult_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M121.809,-755.899C125.955,-753.455 129.773,-750.521 133,-747 172.855,-703.515 195.49,-518.785 202.294,-454.312"/>
+<polygon fill="#000000" stroke="#000000" points="205.807,-454.361 203.348,-444.056 198.844,-453.645 205.807,-454.361"/>
+</g>
+<!-- proc~spectrum_unary_minus -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node5" class="node"><title>proc~spectrum_unary_minus</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node5"><a xlink:href="../proc/spectrum_unary_minus.html" xlink:title="spectrum_unary_minus">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="128.5,-738 4.5,-738 4.5,-714 128.5,-714 128.5,-738"/>
+<text text-anchor="middle" x="66.5" y="-723.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_unary_minus</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_unary_minus&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge4" class="edge"><title>proc~spectrum_unary_minus&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M121.373,-713.965C125.664,-711.509 129.633,-708.554 133,-705 200.805,-633.424 206.191,-505.686 205.393,-454.309"/>
+<polygon fill="#000000" stroke="#000000" points="208.891,-454.194 205.139,-444.285 201.893,-454.371 208.891,-454.194"/>
+</g>
+<!-- proc~eq~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node6" class="node"><title>proc~eq~2</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node6"><a xlink:href="../proc/eq%7E2.html" xlink:title="eq">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="93.5,-696 39.5,-696 39.5,-672 93.5,-672 93.5,-696"/>
+<text text-anchor="middle" x="66.5" y="-681.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">eq</text>
+</a>
+</g>
+</g>
+<!-- proc~eq~2&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge5" class="edge"><title>proc~eq~2&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M93.8004,-681.337C107.142,-678.694 122.666,-673.438 133,-663 190.982,-604.431 202.083,-499.848 204.108,-454.264"/>
+<polygon fill="#000000" stroke="#000000" points="207.606,-454.363 204.445,-444.251 200.61,-454.128 207.606,-454.363"/>
+</g>
+<!-- proc~spectrum_add_real -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node7" class="node"><title>proc~spectrum_add_real</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node7"><a xlink:href="../proc/spectrum_add_real.html" xlink:title="spectrum_add_real">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="119,-654 14,-654 14,-630 119,-630 119,-654"/>
+<text text-anchor="middle" x="66.5" y="-639.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_add_real</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_add_real&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge6" class="edge"><title>proc~spectrum_add_real&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M119.05,-630.593C124.148,-628.019 128.931,-624.865 133,-621 181.257,-575.162 197.257,-493.463 202.308,-454.23"/>
+<polygon fill="#000000" stroke="#000000" points="205.802,-454.479 203.482,-444.142 198.849,-453.67 205.802,-454.479"/>
+</g>
+<!-- proc~spectrum_sub_real -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node8" class="node"><title>proc~spectrum_sub_real</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node8"><a xlink:href="../proc/spectrum_sub_real.html" xlink:title="spectrum_sub_real">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="118.5,-612 14.5,-612 14.5,-588 118.5,-588 118.5,-612"/>
+<text text-anchor="middle" x="66.5" y="-597.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_sub_real</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_sub_real&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge7" class="edge"><title>proc~spectrum_sub_real&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M118.707,-588.214C123.867,-585.71 128.759,-582.676 133,-579 171.726,-545.432 191.395,-486.074 199.623,-454.015"/>
+<polygon fill="#000000" stroke="#000000" points="203.032,-454.809 201.986,-444.266 196.229,-453.161 203.032,-454.809"/>
+</g>
+<!-- proc~real_mult_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node9" class="node"><title>proc~real_mult_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node9"><a xlink:href="../proc/real_mult_spectrum.html" xlink:title="real_mult_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="120,-570 13,-570 13,-546 120,-546 120,-570"/>
+<text text-anchor="middle" x="66.5" y="-555.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">real_mult_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~real_mult_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge8" class="edge"><title>proc~real_mult_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M117.525,-545.883C123.019,-543.433 128.312,-540.502 133,-537 162.374,-515.056 183.75,-477.331 195.129,-453.576"/>
+<polygon fill="#000000" stroke="#000000" points="198.379,-454.885 199.387,-444.338 192.022,-451.954 198.379,-454.885"/>
+</g>
+<!-- proc~spectrum_sub_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node10" class="node"><title>proc~spectrum_sub_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node10"><a xlink:href="../proc/spectrum_sub_spectrum.html" xlink:title="spectrum_sub_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="131.5,-528 1.5,-528 1.5,-504 131.5,-504 131.5,-528"/>
+<text text-anchor="middle" x="66.5" y="-513.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_sub_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_sub_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge9" class="edge"><title>proc~spectrum_sub_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M113.627,-503.881C120.32,-501.367 126.977,-498.419 133,-495 153.206,-483.531 172.76,-465.685 186.297,-451.912"/>
+<polygon fill="#000000" stroke="#000000" points="189.146,-453.996 193.531,-444.351 184.089,-449.157 189.146,-453.996"/>
+</g>
+<!-- proc~real_add_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node11" class="node"><title>proc~real_add_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node11"><a xlink:href="../proc/real_add_spectrum.html" xlink:title="real_add_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="119,-486 14,-486 14,-462 119,-462 119,-486"/>
+<text text-anchor="middle" x="66.5" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">real_add_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~real_add_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge10" class="edge"><title>proc~real_add_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M106.759,-461.964C123.151,-456.939 142.293,-451.071 159.271,-445.866"/>
+<polygon fill="#000000" stroke="#000000" points="160.445,-449.167 168.98,-442.889 158.393,-442.474 160.445,-449.167"/>
+</g>
+<!-- proc~gt -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node12" class="node"><title>proc~gt</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node12"><a xlink:href="../proc/gt.html" xlink:title="gt">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="93.5,-444 39.5,-444 39.5,-420 93.5,-420 93.5,-444"/>
+<text text-anchor="middle" x="66.5" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gt</text>
+</a>
+</g>
+</g>
+<!-- proc~gt&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge11" class="edge"><title>proc~gt&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M93.5911,-432C112.022,-432 137.206,-432 158.918,-432"/>
+<polygon fill="#000000" stroke="#000000" points="158.932,-435.5 168.932,-432 158.931,-428.5 158.932,-435.5"/>
+</g>
+<!-- proc~spectrum_mult_real2d -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node13" class="node"><title>proc~spectrum_mult_real2d</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node13"><a xlink:href="../proc/spectrum_mult_real2d.html" xlink:title="spectrum_mult_real2d">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="126,-402 7,-402 7,-378 126,-378 126,-402"/>
+<text text-anchor="middle" x="66.5" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_mult_real2d</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_mult_real2d&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge12" class="edge"><title>proc~spectrum_mult_real2d&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M106.759,-402.036C123.151,-407.061 142.293,-412.929 159.271,-418.134"/>
+<polygon fill="#000000" stroke="#000000" points="158.393,-421.526 168.98,-421.111 160.445,-414.833 158.393,-421.526"/>
+</g>
+<!-- proc~writejson~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node14" class="node"><title>proc~writejson~2</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node14"><a xlink:href="../proc/writejson%7E2.html" xlink:title="writeJSON">
+<polygon fill="#d9534f" stroke="#d9534f" points="98,-360 35,-360 35,-336 98,-336 98,-360"/>
+<text text-anchor="middle" x="66.5" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">writeJSON</text>
+</a>
+</g>
+</g>
+<!-- proc~writejson~2&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge13" class="edge"><title>proc~writejson~2&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M98.2602,-355.031C109.611,-358.343 122.303,-362.928 133,-369 153.206,-380.469 172.76,-398.315 186.297,-412.088"/>
+<polygon fill="#000000" stroke="#000000" points="184.089,-414.843 193.531,-419.649 189.146,-410.004 184.089,-414.843"/>
+</g>
+<!-- proc~real_div_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node15" class="node"><title>proc~real_div_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node15"><a xlink:href="../proc/real_div_spectrum.html" xlink:title="real_div_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="116.5,-318 16.5,-318 16.5,-294 116.5,-294 116.5,-318"/>
+<text text-anchor="middle" x="66.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">real_div_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~real_div_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge14" class="edge"><title>proc~real_div_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M116.513,-317.673C122.369,-320.211 128.025,-323.284 133,-327 162.374,-348.944 183.75,-386.669 195.129,-410.424"/>
+<polygon fill="#000000" stroke="#000000" points="192.022,-412.046 199.387,-419.662 198.379,-409.115 192.022,-412.046"/>
+</g>
+<!-- proc~lt -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node16" class="node"><title>proc~lt</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node16"><a xlink:href="../proc/lt.html" xlink:title="lt">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="93.5,-276 39.5,-276 39.5,-252 93.5,-252 93.5,-276"/>
+<text text-anchor="middle" x="66.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lt</text>
+</a>
+</g>
+</g>
+<!-- proc~lt&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge15" class="edge"><title>proc~lt&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M93.5023,-267.394C106.599,-270.241 121.991,-275.457 133,-285 171.726,-318.568 191.395,-377.926 199.623,-409.985"/>
+<polygon fill="#000000" stroke="#000000" points="196.229,-410.839 201.986,-419.734 203.032,-409.191 196.229,-410.839"/>
+</g>
+<!-- proc~spectrum_mult_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node17" class="node"><title>proc~spectrum_mult_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node17"><a xlink:href="../proc/spectrum_mult_spectrum.html" xlink:title="spectrum_mult_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="133,-234 0,-234 0,-210 133,-210 133,-234"/>
+<text text-anchor="middle" x="66.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_mult_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_mult_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge16" class="edge"><title>proc~spectrum_mult_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M120.345,-234.077C124.957,-236.523 129.277,-239.464 133,-243 181.257,-288.838 197.257,-370.537 202.308,-409.77"/>
+<polygon fill="#000000" stroke="#000000" points="198.849,-410.33 203.482,-419.858 205.802,-409.521 198.849,-410.33"/>
+</g>
+<!-- proc~ge -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node18" class="node"><title>proc~ge</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node18"><a xlink:href="../proc/ge.html" xlink:title="ge">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="93.5,-192 39.5,-192 39.5,-168 93.5,-168 93.5,-192"/>
+<text text-anchor="middle" x="66.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ge</text>
+</a>
+</g>
+</g>
+<!-- proc~ge&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge17" class="edge"><title>proc~ge&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M93.8004,-182.663C107.142,-185.306 122.666,-190.562 133,-201 190.982,-259.569 202.083,-364.152 204.108,-409.736"/>
+<polygon fill="#000000" stroke="#000000" points="200.61,-409.872 204.445,-419.749 207.606,-409.637 200.61,-409.872"/>
+</g>
+<!-- proc~spectrum_div_real -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node19" class="node"><title>proc~spectrum_div_real</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node19"><a xlink:href="../proc/spectrum_div_real.html" xlink:title="spectrum_div_real">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="116.5,-150 16.5,-150 16.5,-126 116.5,-126 116.5,-150"/>
+<text text-anchor="middle" x="66.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_div_real</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_div_real&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge18" class="edge"><title>proc~spectrum_div_real&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M116.547,-147.536C122.68,-150.409 128.401,-154.145 133,-159 200.805,-230.576 206.191,-358.314 205.393,-409.691"/>
+<polygon fill="#000000" stroke="#000000" points="201.893,-409.629 205.139,-419.715 208.891,-409.806 201.893,-409.629"/>
+</g>
+<!-- proc~real_sub_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node20" class="node"><title>proc~real_sub_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node20"><a xlink:href="../proc/real_sub_spectrum.html" xlink:title="real_sub_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="118.5,-108 14.5,-108 14.5,-84 118.5,-84 118.5,-108"/>
+<text text-anchor="middle" x="66.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">real_sub_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~real_sub_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge19" class="edge"><title>proc~real_sub_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M118.643,-106.359C124.009,-109.115 128.966,-112.598 133,-117 172.855,-160.485 195.49,-345.215 202.294,-409.688"/>
+<polygon fill="#000000" stroke="#000000" points="198.844,-410.355 203.348,-419.944 205.807,-409.639 198.844,-410.355"/>
+</g>
+<!-- proc~le -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node21" class="node"><title>proc~le</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node21"><a xlink:href="../proc/le.html" xlink:title="le">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="93.5,-66 39.5,-66 39.5,-42 93.5,-42 93.5,-66"/>
+<text text-anchor="middle" x="66.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">le</text>
+</a>
+</g>
+</g>
+<!-- proc~le&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge20" class="edge"><title>proc~le&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M93.5891,-56.1239C107.206,-58.6001 123.056,-63.8678 133,-75 177.876,-125.236 197.589,-339.279 202.932,-409.55"/>
+<polygon fill="#000000" stroke="#000000" points="199.469,-410.18 203.693,-419.896 206.45,-409.666 199.469,-410.18"/>
+</g>
+<!-- proc~spectrum_div_spectrum -->
+<g id="proc~~getspectrum~2~~CalledByGraph_node22" class="node"><title>proc~spectrum_div_spectrum</title>
+<g id="a_proc~~getspectrum~2~~CalledByGraph_node22"><a xlink:href="../proc/spectrum_div_spectrum.html" xlink:title="spectrum_div_spectrum">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="130,-24 3,-24 3,-0 130,-0 130,-24"/>
+<text text-anchor="middle" x="66.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">spectrum_div_spectrum</text>
+</a>
+</g>
+</g>
+<!-- proc~spectrum_div_spectrum&#45;&gt;proc~getspectrum~2 -->
+<g id="proc~~getspectrum~2~~CalledByGraph_edge21" class="edge"><title>proc~spectrum_div_spectrum&#45;&gt;proc~getspectrum~2</title>
+<path fill="none" stroke="#000000" d="M122.291,-24.1319C126.28,-26.5712 129.933,-29.4954 133,-33 182.925,-90.0459 199.458,-333.66 203.444,-409.423"/>
+<polygon fill="#000000" stroke="#000000" points="199.964,-409.904 203.961,-419.715 206.955,-409.552 199.964,-409.904"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="560pt" height="32pt"
+ viewBox="0.00 0.00 559.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 555.5,-28 555.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,-0 64,-0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,-0 136,-0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,-0 209.5,-0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="364,-24 228,-24 228,-0 364,-0 364,-24"/>
+<text text-anchor="middle" x="296" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="436,-24 382,-24 382,-0 436,-0 436,-24"/>
+<text text-anchor="middle" x="409" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="551.5,-24 454.5,-24 454.5,-0 551.5,-0 551.5,-24"/>
+<text text-anchor="middle" x="503" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module.
+    </p>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/getspectrum%7E2.html#src">getSpectrum</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">pure function </span><span class="n">getSpectrum</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+  <span class="c">!! Returns the spectrum array.</span>
+  <span class="k">class</span><span class="p">(</span><span class="n">spectrum_type</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">self</span> <span class="c">!! Spectrum instance</span>
+  <span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">rk</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:,:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">spec</span> <span class="c">!! Spectrum array</span>
+  <span class="n">spec</span> <span class="o">=</span> <span class="n">self</span> <span class="p">%</span> <span class="n">spec</span>
+<span class="n">endfunction</span> <span class="n">getSpectrum</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-1">All Procedures</a></h3></div>
+  <div id="allprocs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/advect1drank1.html">advect1dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advect1drank2.html">advect1dRank2</a>
+      
+      <a class="list-group-item" href="../proc/advect2drank2.html">advect2dRank2</a>
+      
+      <a class="list-group-item" href="../interface/advectcentered2ndorder.html">advectCentered2ndOrder</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder1drank0.html">advectCentered2ndOrder1dRank0</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder1drank1.html">advectCentered2ndOrder1dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder1drank2.html">advectCentered2ndOrder1dRank2</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder2drank0.html">advectCentered2ndOrder2dRank0</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder2drank1.html">advectCentered2ndOrder2dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advectcentered2ndorder2drank2.html">advectCentered2ndOrder2dRank2</a>
+      
+      <a class="list-group-item" href="../interface/advectupwind1storder.html">advectUpwind1stOrder</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder1drank0.html">advectUpwind1stOrder1dRank0</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder1drank1.html">advectUpwind1stOrder1dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder1drank2.html">advectUpwind1stOrder1dRank2</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder2drank0.html">advectUpwind1stOrder2dRank0</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder2drank1.html">advectUpwind1stOrder2dRank1</a>
+      
+      <a class="list-group-item" href="../proc/advectupwind1storder2drank2.html">advectUpwind1stOrder2dRank2</a>
+      
+      <a class="list-group-item" href="../proc/assign_array_1d.html">assign_array_1d</a>
+      
+      <a class="list-group-item" href="../proc/assign_array_2d.html">assign_array_2d</a>
+      
+      <a class="list-group-item" href="../proc/assign_spectrum_array_1d.html">assign_spectrum_array_1d</a>
+      
+      <a class="list-group-item" href="../proc/assign_spectrum_array_2d.html">assign_spectrum_array_2d</a>
+      
+      <a class="list-group-item" href="../interface/backward_euler.html">backward_euler</a>
+      
+      <a class="list-group-item" href="../proc/backward_euler_domain.html">backward_euler_domain</a>
+      
+      <a class="list-group-item" href="../proc/backward_euler_spectrum.html">backward_euler_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/constructor.html">constructor</a>
+      
+      <a class="list-group-item" href="../proc/constructor%7E2.html">constructor</a>
+      
+      <a class="list-group-item" href="../proc/constructor_1d.html">constructor_1d</a>
+      
+      <a class="list-group-item" href="../proc/constructor_2d.html">constructor_2d</a>
+      
+      <a class="list-group-item" href="../interface/diff.html">diff</a>
+      
+      <a class="list-group-item" href="../proc/diff_1d.html">diff_1d</a>
+      
+      <a class="list-group-item" href="../proc/diff_2d.html">diff_2d</a>
+      
+      <a class="list-group-item" href="../interface/diff_periodic.html">diff_periodic</a>
+      
+      <a class="list-group-item" href="../proc/diff_periodic_1d.html">diff_periodic_1d</a>
+      
+      <a class="list-group-item" href="../proc/diff_periodic_2d.html">diff_periodic_2d</a>
+      
+      <a class="list-group-item" href="../proc/domain_add_domain.html">domain_add_domain</a>
+      
+      <a class="list-group-item" href="../proc/domain_add_real.html">domain_add_real</a>
+      
+      <a class="list-group-item" href="../proc/domain_div_domain.html">domain_div_domain</a>
+      
+      <a class="list-group-item" href="../proc/domain_div_real.html">domain_div_real</a>
+      
+      <a class="list-group-item" href="../proc/domain_mult_domain.html">domain_mult_domain</a>
+      
+      <a class="list-group-item" href="../proc/domain_mult_real.html">domain_mult_real</a>
+      
+      <a class="list-group-item" href="../proc/domain_sub_domain.html">domain_sub_domain</a>
+      
+      <a class="list-group-item" href="../proc/domain_sub_real.html">domain_sub_real</a>
+      
+      <a class="list-group-item" href="../interface/domain_type.html">domain_type</a>
+      
+      <a class="list-group-item" href="../proc/domain_unary_minus.html">domain_unary_minus</a>
+      
+      <a class="list-group-item" href="../proc/donelanhamiltonhui.html">donelanHamiltonHui</a>
+      
+      <a class="list-group-item" href="../proc/donelanhamiltonhuidirectionalspectrum.html">donelanHamiltonHuiDirectionalSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/donelanhamiltonhuidirectionalspreading.html">donelanHamiltonHuiDirectionalSpreading</a>
+      
+      <a class="list-group-item" href="../proc/elevation.html">elevation</a>
+      
+      <a class="list-group-item" href="../proc/eq.html">eq</a>
+      
+      <a class="list-group-item" href="../proc/eq%7E2.html">eq</a>
+      
+      <a class="list-group-item" href="../interface/exact_exponential.html">exact_exponential</a>
+      
+      <a class="list-group-item" href="../proc/exact_exponential_domain.html">exact_exponential_domain</a>
+      
+      <a class="list-group-item" href="../proc/exact_exponential_spectrum.html">exact_exponential_spectrum</a>
+      
+      <a class="list-group-item" href="../interface/forward_euler.html">forward_euler</a>
+      
+      <a class="list-group-item" href="../proc/forward_euler_domain.html">forward_euler_domain</a>
+      
+      <a class="list-group-item" href="../proc/forward_euler_spectrum.html">forward_euler_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/frequencymoment.html">frequencyMoment</a>
+      
+      <a class="list-group-item" href="../proc/frequencymoment%7E2.html">frequencyMoment</a>
+      
+      <a class="list-group-item" href="../proc/ge.html">ge</a>
+      
+      <a class="list-group-item" href="../proc/getairdensity.html">getAirDensity</a>
+      
+      <a class="list-group-item" href="../proc/getairdensity%7E2.html">getAirDensity</a>
+      
+      <a class="list-group-item" href="../proc/getamplitude.html">getAmplitude</a>
+      
+      <a class="list-group-item" href="../proc/getaxisx.html">getAxisX</a>
+      
+      <a class="list-group-item" href="../proc/getaxisy.html">getAxisY</a>
+      
+      <a class="list-group-item" href="../proc/getcurrent_u.html">getCurrent_u</a>
+      
+      <a class="list-group-item" href="../proc/getcurrent_u%7E2.html">getCurrent_u</a>
+      
+      <a class="list-group-item" href="../proc/getcurrent_v.html">getCurrent_v</a>
+      
+      <a class="list-group-item" href="../proc/getcurrent_v%7E2.html">getCurrent_v</a>
+      
+      <a class="list-group-item" href="../proc/getdepth.html">getDepth</a>
+      
+      <a class="list-group-item" href="../proc/getdepth%7E2.html">getDepth</a>
+      
+      <a class="list-group-item" href="../proc/getdepthlevels.html">getDepthLevels</a>
+      
+      <a class="list-group-item" href="../proc/getdirections.html">getDirections</a>
+      
+      <a class="list-group-item" href="../proc/getdirections%7E2.html">getDirections</a>
+      
+      <a class="list-group-item" href="../proc/getdirections2d.html">getDirections2d</a>
+      
+      <a class="list-group-item" href="../proc/getelevation.html">getElevation</a>
+      
+      <a class="list-group-item" href="../proc/getelevation%7E2.html">getElevation</a>
+      
+      <a class="list-group-item" href="../proc/getfrequency.html">getFrequency</a>
+      
+      <a class="list-group-item" href="../proc/getfrequency%7E2.html">getFrequency</a>
+      
+      <a class="list-group-item" href="../proc/getfrequency2d.html">getFrequency2d</a>
+      
+      <a class="list-group-item" href="../proc/getgravity.html">getGravity</a>
+      
+      <a class="list-group-item" href="../proc/getgravity%7E2.html">getGravity</a>
+      
+      <a class="list-group-item" href="../proc/getgrid.html">getGrid</a>
+      
+      <a class="list-group-item" href="../proc/getgridrotation.html">getGridRotation</a>
+      
+      <a class="list-group-item" href="../proc/getgridspacingx.html">getGridSpacingX</a>
+      
+      <a class="list-group-item" href="../proc/getgridspacingxwithhalo.html">getGridSpacingXWithHalo</a>
+      
+      <a class="list-group-item" href="../proc/getgridspacingy.html">getGridSpacingY</a>
+      
+      <a class="list-group-item" href="../proc/getgridspacingywithhalo.html">getGridSpacingYWithHalo</a>
+      
+      <a class="list-group-item" href="../proc/getgroupspeed.html">getGroupSpeed</a>
+      
+      <a class="list-group-item" href="../proc/getgroupspeed%7E2.html">getGroupSpeed</a>
+      
+      <a class="list-group-item" href="../proc/getgroupspeed2d.html">getGroupSpeed2d</a>
+      
+      <a class="list-group-item" href="../proc/getlatitude.html">getLatitude</a>
+      
+      <a class="list-group-item" href="../proc/getlongitude.html">getLongitude</a>
+      
+      <a class="list-group-item" href="../proc/getlowerbounds.html">getLowerBounds</a>
+      
+      <a class="list-group-item" href="../proc/getlowerbounds%7E2.html">getLowerBounds</a>
+      
+      <a class="list-group-item" href="../proc/getphasespeed.html">getPhaseSpeed</a>
+      
+      <a class="list-group-item" href="../proc/getphasespeed%7E2.html">getPhaseSpeed</a>
+      
+      <a class="list-group-item" href="../proc/getphasespeed2d.html">getPhaseSpeed2d</a>
+      
+      <a class="list-group-item" href="../proc/getspectrum.html">getSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/getspectrum%7E2.html">getSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/getspectrumarray.html">getSpectrumArray</a>
+      
+      <a class="list-group-item" href="../proc/getsurfacetension.html">getSurfaceTension</a>
+      
+      <a class="list-group-item" href="../proc/getsurfacetension%7E2.html">getSurfaceTension</a>
+      
+      <a class="list-group-item" href="../proc/getupperbounds.html">getUpperBounds</a>
+      
+      <a class="list-group-item" href="../proc/getupperbounds%7E2.html">getUpperBounds</a>
+      
+      <a class="list-group-item" href="../proc/getwaterdensity.html">getWaterDensity</a>
+      
+      <a class="list-group-item" href="../proc/getwaterdensity%7E2.html">getWaterDensity</a>
+      
+      <a class="list-group-item" href="../proc/getwaveaction.html">getWaveAction</a>
+      
+      <a class="list-group-item" href="../proc/getwavelength.html">getWavelength</a>
+      
+      <a class="list-group-item" href="../proc/getwavenumber.html">getWavenumber</a>
+      
+      <a class="list-group-item" href="../proc/getwavenumber2d.html">getWavenumber2d</a>
+      
+      <a class="list-group-item" href="../proc/getwavenumberspacing.html">getWavenumberSpacing</a>
+      
+      <a class="list-group-item" href="../proc/gravityclairaut.html">gravityClairaut</a>
+      
+      <a class="list-group-item" href="../interface/grid_type.html">grid_type</a>
+      
+      <a class="list-group-item" href="../proc/gt.html">gt</a>
+      
+      <a class="list-group-item" href="../proc/horizontalacceleration.html">horizontalAcceleration</a>
+      
+      <a class="list-group-item" href="../proc/horizontalvelocity.html">horizontalVelocity</a>
+      
+      <a class="list-group-item" href="../interface/integrate.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate_domain.html">integrate_domain</a>
+      
+      <a class="list-group-item" href="../proc/integrate_spectrum.html">integrate_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/isallocated.html">isAllocated</a>
+      
+      <a class="list-group-item" href="../proc/isallocated%7E2.html">isAllocated</a>
+      
+      <a class="list-group-item" href="../proc/ismonochromatic.html">isMonochromatic</a>
+      
+      <a class="list-group-item" href="../proc/isomnidirectional.html">isOmnidirectional</a>
+      
+      <a class="list-group-item" href="../proc/jonswap.html">jonswap</a>
+      
+      <a class="list-group-item" href="../proc/jonswappeakfrequency.html">jonswapPeakFrequency</a>
+      
+      <a class="list-group-item" href="../proc/le.html">le</a>
+      
+      <a class="list-group-item" href="../proc/lt.html">lt</a>
+      
+      <a class="list-group-item" href="../proc/meanperiod.html">meanPeriod</a>
+      
+      <a class="list-group-item" href="../proc/meanperiod%7E2.html">meanPeriod</a>
+      
+      <a class="list-group-item" href="../proc/meanperiodzerocrossing.html">meanPeriodZeroCrossing</a>
+      
+      <a class="list-group-item" href="../proc/meanperiodzerocrossing%7E2.html">meanPeriodZeroCrossing</a>
+      
+      <a class="list-group-item" href="../proc/meansquareslope.html">meanSquareSlope</a>
+      
+      <a class="list-group-item" href="../proc/meansquareslopedirectional.html">meanSquareSlopeDirectional</a>
+      
+      <a class="list-group-item" href="../proc/momentum_x.html">momentum_x</a>
+      
+      <a class="list-group-item" href="../proc/momentum_y.html">momentum_y</a>
+      
+      <a class="list-group-item" href="../proc/momentumflux_xx.html">momentumFlux_xx</a>
+      
+      <a class="list-group-item" href="../proc/momentumflux_xy.html">momentumFlux_xy</a>
+      
+      <a class="list-group-item" href="../proc/momentumflux_yy.html">momentumFlux_yy</a>
+      
+      <a class="list-group-item" href="../proc/neq.html">neq</a>
+      
+      <a class="list-group-item" href="../proc/neq%7E2.html">neq</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionaldepth.html">nondimensionalDepth</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalenergy.html">nondimensionalEnergy</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalfetch.html">nondimensionalFetch</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalfrequency.html">nondimensionalFrequency</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalroughness_h1986.html">nondimensionalRoughness_H1986</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionalroughness_s1974.html">nondimensionalRoughness_S1974</a>
+      
+      <a class="list-group-item" href="../proc/nondimensionaltime.html">nondimensionalTime</a>
+      
+      <a class="list-group-item" href="../proc/omnidirectionalspectrum.html">omnidirectionalSpectrum</a>
+      
+      <a class="list-group-item" href="../interface/ones.html">ones</a>
+      
+      <a class="list-group-item" href="../proc/ones_int.html">ones_int</a>
+      
+      <a class="list-group-item" href="../proc/ones_real.html">ones_real</a>
+      
+      <a class="list-group-item" href="../proc/peakedness.html">peakedness</a>
+      
+      <a class="list-group-item" href="../proc/peakfrequency.html">peakFrequency</a>
+      
+      <a class="list-group-item" href="../proc/peakfrequencydiscrete.html">peakFrequencyDiscrete</a>
+      
+      <a class="list-group-item" href="../proc/phillips.html">phillips</a>
+      
+      <a class="list-group-item" href="../proc/piersonmoskowitz.html">piersonMoskowitz</a>
+      
+      <a class="list-group-item" href="../proc/piersonmoskowitzpeakfrequency.html">piersonMoskowitzPeakFrequency</a>
+      
+      <a class="list-group-item" href="../proc/pressure.html">pressure</a>
+      
+      <a class="list-group-item" href="../interface/range.html">range</a>
+      
+      <a class="list-group-item" href="../proc/range_int.html">range_int</a>
+      
+      <a class="list-group-item" href="../proc/range_real.html">range_real</a>
+      
+      <a class="list-group-item" href="../proc/readjson.html">readJSON</a>
+      
+      <a class="list-group-item" href="../proc/real2d_mult_spectrum.html">real2d_mult_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/real_add_domain.html">real_add_domain</a>
+      
+      <a class="list-group-item" href="../proc/real_add_spectrum.html">real_add_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/real_div_domain.html">real_div_domain</a>
+      
+      <a class="list-group-item" href="../proc/real_div_spectrum.html">real_div_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/real_mult_domain.html">real_mult_domain</a>
+      
+      <a class="list-group-item" href="../proc/real_mult_spectrum.html">real_mult_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/real_sub_domain.html">real_sub_domain</a>
+      
+      <a class="list-group-item" href="../proc/real_sub_spectrum.html">real_sub_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/saturationspectrum.html">saturationSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/sbf_dccm2012.html">sbf_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/sbf_jonswap.html">sbf_JONSWAP</a>
+      
+      <a class="list-group-item" href="../proc/sds_dccm2012.html">sds_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/sdt_dccm2012.html">sdt_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/setairdensity.html">setAirDensity</a>
+      
+      <a class="list-group-item" href="../proc/setairdensity%7E2.html">setAirDensity</a>
+      
+      <a class="list-group-item" href="../proc/setcurrent1d.html">setCurrent1d</a>
+      
+      <a class="list-group-item" href="../proc/setcurrent2d.html">setCurrent2d</a>
+      
+      <a class="list-group-item" href="../proc/setdepth.html">setDepth</a>
+      
+      <a class="list-group-item" href="../proc/setdepth%7E2.html">setDepth</a>
+      
+      <a class="list-group-item" href="../proc/setelevation.html">setElevation</a>
+      
+      <a class="list-group-item" href="../proc/setelevation%7E2.html">setElevation</a>
+      
+      <a class="list-group-item" href="../proc/setgravity.html">setGravity</a>
+      
+      <a class="list-group-item" href="../proc/setgravity%7E2.html">setGravity</a>
+      
+      <a class="list-group-item" href="../proc/setspectrum1d.html">setSpectrum1d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrum1d%7E2.html">setSpectrum1d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrum2d.html">setSpectrum2d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrum2d%7E2.html">setSpectrum2d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrumarray1d1d.html">setSpectrumArray1d1d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrumarray1d2d.html">setSpectrumArray1d2d</a>
+      
+      <a class="list-group-item" href="../proc/setspectrumarray2d2d.html">setSpectrumArray2d2d</a>
+      
+      <a class="list-group-item" href="../proc/setsurfacetension.html">setSurfaceTension</a>
+      
+      <a class="list-group-item" href="../proc/setsurfacetension%7E2.html">setSurfaceTension</a>
+      
+      <a class="list-group-item" href="../proc/setwaterdensity.html">setWaterDensity</a>
+      
+      <a class="list-group-item" href="../proc/setwaterdensity%7E2.html">setWaterDensity</a>
+      
+      <a class="list-group-item" href="../proc/significantsurfaceorbitalvelocity.html">significantSurfaceOrbitalVelocity</a>
+      
+      <a class="list-group-item" href="../proc/significantwaveheight.html">significantWaveHeight</a>
+      
+      <a class="list-group-item" href="../proc/significantwaveheight%7E2.html">significantWaveHeight</a>
+      
+      <a class="list-group-item" href="../proc/sin_dccm2012.html">sin_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/snl_dccm2012.html">snl_DCCM2012</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_add_real.html">spectrum_add_real</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_add_spectrum.html">spectrum_add_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_div_real.html">spectrum_div_real</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_div_spectrum.html">spectrum_div_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_mult_real.html">spectrum_mult_real</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_mult_real2d.html">spectrum_mult_real2d</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_mult_spectrum.html">spectrum_mult_spectrum</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_sub_real.html">spectrum_sub_real</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_sub_spectrum.html">spectrum_sub_spectrum</a>
+      
+      <a class="list-group-item" href="../interface/spectrum_type.html">spectrum_type</a>
+      
+      <a class="list-group-item" href="../proc/spectrum_unary_minus.html">spectrum_unary_minus</a>
+      
+      <a class="list-group-item" href="../proc/stokesdrift.html">stokesDrift</a>
+      
+      <a class="list-group-item" href="../proc/stokesdrift2d.html">stokesDrift2d</a>
+      
+      <a class="list-group-item" href="../interface/tile.html">tile</a>
+      
+      <a class="list-group-item" href="../proc/tile_1d_int.html">tile_1d_int</a>
+      
+      <a class="list-group-item" href="../proc/tile_1d_real.html">tile_1d_real</a>
+      
+      <a class="list-group-item" href="../proc/tile_2d_int.html">tile_2d_int</a>
+      
+      <a class="list-group-item" href="../proc/tile_2d_real.html">tile_2d_real</a>
+      
+      <a class="list-group-item" href="../proc/tile_3d_int.html">tile_3d_int</a>
+      
+      <a class="list-group-item" href="../proc/tile_3d_real.html">tile_3d_real</a>
+      
+      <a class="list-group-item" href="../proc/ursellnumber.html">ursellNumber</a>
+      
+      <a class="list-group-item" href="../proc/verticalacceleration.html">verticalAcceleration</a>
+      
+      <a class="list-group-item" href="../proc/verticalvelocity.html">verticalVelocity</a>
+      
+      <a class="list-group-item" href="../proc/waveage.html">waveAge</a>
+      
+      <a class="list-group-item" href="../proc/wavenumber.html">wavenumber</a>
+      
+      <a class="list-group-item" href="../proc/wavenumbermoment.html">wavenumberMoment</a>
+      
+      <a class="list-group-item" href="../proc/wavenumbermoment%7E2.html">wavenumberMoment</a>
+      
+      <a class="list-group-item" href="../proc/wavenumberspectrum.html">wavenumberSpectrum</a>
+      
+      <a class="list-group-item" href="../proc/writejson.html">writeJSON</a>
+      
+      <a class="list-group-item" href="../proc/writejson%7E2.html">writeJSON</a>
+      
+      <a class="list-group-item" href="../interface/zeros.html">zeros</a>
+      
+      <a class="list-group-item" href="../proc/zeros_int.html">zeros_int</a>
+      
+      <a class="list-group-item" href="../proc/zeros_real.html">zeros_real</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> wavy was developed by Wavebit Scientific LLC</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

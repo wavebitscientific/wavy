@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="A spectral ocean wave modeling framework">
+    
+    <meta name="author" content="Wavebit Scientific LLC" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>mod_precision.f90 &ndash; wavy</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">wavy </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>mod_precision.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.4% of total for source files.">10 statements</a>
+     </li> 
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/mod_precision.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li class="active">mod_precision.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/mod_precision.html">mod_precision</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/mod_precision.f90.html#src">mod_precision.f90</a>
+  </div>
+</div>
+
+
+  <hr>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-0">All Source Files</a></h3></div>
+  <div id="allfiles-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../sourcefile/mod_advection.f90.html">mod_advection.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_const.f90.html">mod_const.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_domain.f90.html">mod_domain.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_gravity.f90.html">mod_gravity.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_grid.f90.html">mod_grid.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_io.f90.html">mod_io.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_linear_wave_theory.f90.html">mod_linear_wave_theory.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_nondimensional.f90.html">mod_nondimensional.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_precision.f90.html">mod_precision.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_source_functions.f90.html">mod_source_functions.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_spectral_shapes.f90.html">mod_spectral_shapes.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_spectrum.f90.html">mod_spectrum.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_stokes.f90.html">mod_stokes.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_time_integration.f90.html">mod_time_integration.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_utility.f90.html">mod_utility.f90</a>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>  
+
+    </div>
+    <div class="col-md-9" id='text'>
+    
+    
+      
+      <h3>Files Dependent On This One</h3>
+      
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: sourcefile~~mod_precision.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefilemod_precisionf90AfferentGraph" width="641pt" height="347pt"
+ viewBox="0.00 0.00 641.00 347.34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph" class="graph" transform="scale(0.789409 0.789409) rotate(0) translate(4 436)">
+<title>sourcefile~~mod_precision.f90~~AfferentGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-436 808,-436 808,4 -4,4"/>
+<!-- sourcefile~mod_precision.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node1" class="node"><title>sourcefile~mod_precision.f90</title>
+<polygon fill="none" stroke="black" points="100,-232 0,-232 0,-208 100,-208 100,-232"/>
+<text text-anchor="middle" x="50" y="-217.6" font-family="Helvetica,sans-Serif" font-size="10.50">mod_precision.f90</text>
+</g>
+<!-- sourcefile~mod_stokes.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node2" class="node"><title>sourcefile~mod_stokes.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/mod_stokes.f90.html" xlink:title="mod_stokes.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="255.5,-432 167.5,-432 167.5,-408 255.5,-408 255.5,-432"/>
+<text text-anchor="middle" x="211.5" y="-417.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_stokes.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_stokes.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge13" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_stokes.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M53.5341,-232.058C60.7304,-263.369 84.2106,-348.017 136,-394 142.332,-399.622 149.95,-404.045 157.863,-407.52"/>
+<polygon fill="#000000" stroke="#000000" points="156.641,-410.8 167.229,-411.179 159.188,-404.28 156.641,-410.8"/>
+</g>
+<!-- sourcefile~mod_domain.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node3" class="node"><title>sourcefile~mod_domain.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node3"><a xlink:href="../sourcefile/mod_domain.f90.html" xlink:title="mod_domain.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="611,-350 518,-350 518,-326 611,-326 611,-350"/>
+<text text-anchor="middle" x="564.5" y="-335.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_domain.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_domain.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge14" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_domain.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M212.5,-380C287.006,-405.928 311.254,-384.748 390,-380"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M392,-380C436.559,-377.313 485.919,-364.092 520.199,-353.192"/>
+<polygon fill="#000000" stroke="#000000" points="521.461,-356.462 529.89,-350.044 519.298,-349.804 521.461,-356.462"/>
+</g>
+<!-- sourcefile~mod_time_integration.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node4" class="node"><title>sourcefile~mod_time_integration.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node4"><a xlink:href="../sourcefile/mod_time_integration.f90.html" xlink:title="mod_time_integration.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="804,-350 670,-350 670,-326 804,-326 804,-350"/>
+<text text-anchor="middle" x="737" y="-335.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_time_integration.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_time_integration.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge15" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_time_integration.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M392,-380C499.764,-373.502 527.17,-374.578 634,-359 646.902,-357.119 660.63,-354.631 673.694,-352.027"/>
+<polygon fill="#000000" stroke="#000000" points="674.43,-355.449 683.53,-350.022 673.032,-348.59 674.43,-355.449"/>
+</g>
+<!-- sourcefile~mod_spectrum.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node5" class="node"><title>sourcefile~mod_spectrum.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node5"><a xlink:href="../sourcefile/mod_spectrum.f90.html" xlink:title="mod_spectrum.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="442,-310 340,-310 340,-286 442,-286 442,-310"/>
+<text text-anchor="middle" x="391" y="-295.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_spectrum.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_spectrum.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge16" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_spectrum.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M63.2211,-232.238C78.6617,-246.814 106.767,-270.506 136,-281 199.175,-303.679 276.789,-305.432 329.475,-303.106"/>
+<polygon fill="#000000" stroke="#000000" points="329.857,-306.591 339.668,-302.592 329.504,-299.6 329.857,-306.591"/>
+</g>
+<!-- sourcefile~mod_grid.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node6" class="node"><title>sourcefile~mod_grid.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node6"><a xlink:href="../sourcefile/mod_grid.f90.html" xlink:title="mod_grid.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="429,-352 353,-352 353,-328 429,-328 429,-352"/>
+<text text-anchor="middle" x="391" y="-337.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_grid.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_grid.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge17" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_grid.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M54.8354,-232.395C64.0446,-260.024 90.1131,-326.906 136,-361 163.429,-381.379 178.227,-368.769 210.5,-380"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M212.5,-380C236.839,-388.47 302.255,-369.895 346.501,-355.308"/>
+<polygon fill="#000000" stroke="#000000" points="347.777,-358.572 356.15,-352.081 345.556,-351.934 347.777,-358.572"/>
+</g>
+<!-- sourcefile~mod_const.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node7" class="node"><title>sourcefile~mod_const.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node7"><a xlink:href="../sourcefile/mod_const.f90.html" xlink:title="mod_const.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="253,-272 170,-272 170,-248 253,-248 253,-272"/>
+<text text-anchor="middle" x="211.5" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_const.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_const.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge18" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_const.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M98.8553,-232.001C118.156,-236.842 140.441,-242.43 160,-247.335"/>
+<polygon fill="#000000" stroke="#000000" points="159.399,-250.793 169.95,-249.831 161.102,-244.003 159.399,-250.793"/>
+</g>
+<!-- sourcefile~mod_source_functions.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node8" class="node"><title>sourcefile~mod_source_functions.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node8"><a xlink:href="../sourcefile/mod_source_functions.f90.html" xlink:title="mod_source_functions.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="634,-270 495,-270 495,-246 634,-246 634,-270"/>
+<text text-anchor="middle" x="564.5" y="-255.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_source_functions.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_source_functions.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge19" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_source_functions.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M212.5,-220C311.37,-214.509 425.239,-231.082 495.8,-244.058"/>
+<polygon fill="#000000" stroke="#000000" points="495.417,-247.547 505.889,-245.943 496.703,-240.666 495.417,-247.547"/>
+</g>
+<!-- sourcefile~mod_io.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node9" class="node"><title>sourcefile~mod_io.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node9"><a xlink:href="../sourcefile/mod_io.f90.html" xlink:title="mod_io.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="244.5,-150 178.5,-150 178.5,-126 244.5,-126 244.5,-150"/>
+<text text-anchor="middle" x="211.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_io.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_io.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge20" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_io.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M64.7668,-207.778C80.8238,-194.106 108.668,-172.156 136,-159 146.198,-154.091 157.748,-150.14 168.659,-147.047"/>
+<polygon fill="#000000" stroke="#000000" points="169.677,-150.398 178.441,-144.444 167.877,-143.633 169.677,-150.398"/>
+</g>
+<!-- sourcefile~mod_gravity.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node10" class="node"><title>sourcefile~mod_gravity.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node10"><a xlink:href="../sourcefile/mod_gravity.f90.html" xlink:title="mod_gravity.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="256,-108 167,-108 167,-84 256,-84 256,-108"/>
+<text text-anchor="middle" x="211.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_gravity.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_gravity.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge21" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_gravity.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M57.6781,-207.789C70.1519,-186.143 99.1,-141.06 136,-117 142.346,-112.862 149.51,-109.529 156.823,-106.845"/>
+<polygon fill="#000000" stroke="#000000" points="158.409,-110.009 166.827,-103.575 156.234,-103.356 158.409,-110.009"/>
+</g>
+<!-- sourcefile~mod_advection.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node11" class="node"><title>sourcefile~mod_advection.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node11"><a xlink:href="../sourcefile/mod_advection.f90.html" xlink:title="mod_advection.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="263,-66 160,-66 160,-42 263,-42 263,-66"/>
+<text text-anchor="middle" x="211.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_advection.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_advection.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge22" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_advection.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M54.6567,-207.762C63.6546,-179.793 89.5816,-110.852 136,-75 140.387,-71.6116 145.295,-68.7699 150.441,-66.3868"/>
+<polygon fill="#000000" stroke="#000000" points="151.935,-69.5581 159.902,-62.5732 149.318,-63.0657 151.935,-69.5581"/>
+</g>
+<!-- sourcefile~mod_spectral_shapes.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node12" class="node"><title>sourcefile~mod_spectral_shapes.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node12"><a xlink:href="../sourcefile/mod_spectral_shapes.f90.html" xlink:title="mod_spectral_shapes.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="459,-192 323,-192 323,-168 459,-168 459,-192"/>
+<text text-anchor="middle" x="391" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_spectral_shapes.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_spectral_shapes.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge23" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_spectral_shapes.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M100.258,-221.408C131.8,-221.962 173.589,-222.05 210.5,-220"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M212.5,-220C257.763,-217.486 308.058,-205.221 343.519,-194.927"/>
+<polygon fill="#000000" stroke="#000000" points="344.517,-198.282 353.112,-192.086 342.529,-191.57 344.517,-198.282"/>
+</g>
+<!-- sourcefile~mod_utility.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node13" class="node"><title>sourcefile~mod_utility.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node13"><a xlink:href="../sourcefile/mod_utility.f90.html" xlink:title="mod_utility.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="252.5,-352 170.5,-352 170.5,-328 252.5,-328 252.5,-352"/>
+<text text-anchor="middle" x="211.5" y="-337.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_utility.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_utility.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge24" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_utility.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M58.9409,-232.167C72.4791,-252.007 101.897,-291.378 136,-314 143.629,-319.061 152.352,-323.251 161.077,-326.68"/>
+<polygon fill="#000000" stroke="#000000" points="159.901,-329.977 170.495,-330.108 162.295,-323.399 159.901,-329.977"/>
+</g>
+<!-- sourcefile~mod_linear_wave_theory.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node14" class="node"><title>sourcefile~mod_linear_wave_theory.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node14"><a xlink:href="../sourcefile/mod_linear_wave_theory.f90.html" xlink:title="mod_linear_wave_theory.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="287,-24 136,-24 136,-0 287,-0 287,-24"/>
+<text text-anchor="middle" x="211.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_linear_wave_theory.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_linear_wave_theory.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge25" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_linear_wave_theory.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M52.9086,-207.839C58.7822,-174.569 79.7213,-81.3203 136,-33 137.529,-31.6869 139.135,-30.4556 140.803,-29.301"/>
+<polygon fill="#000000" stroke="#000000" points="142.742,-32.2214 149.598,-24.1437 139.202,-26.1831 142.742,-32.2214"/>
+</g>
+<!-- sourcefile~mod_nondimensional.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_node15" class="node"><title>sourcefile~mod_nondimensional.f90</title>
+<g id="a_sourcefile~~mod_precision.f90~~AfferentGraph_node15"><a xlink:href="../sourcefile/mod_nondimensional.f90.html" xlink:title="mod_nondimensional.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="278,-192 145,-192 145,-168 278,-168 278,-192"/>
+<text text-anchor="middle" x="211.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_nondimensional.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_nondimensional.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge26" class="edge"><title>sourcefile~mod_precision.f90&#45;&gt;sourcefile~mod_nondimensional.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M98.8553,-207.999C115.654,-203.786 134.713,-199.006 152.269,-194.603"/>
+<polygon fill="#000000" stroke="#000000" points="153.555,-197.889 162.403,-192.062 151.852,-191.1 153.555,-197.889"/>
+</g>
+<!-- sourcefile~mod_domain.f90&#45;&gt;sourcefile~mod_time_integration.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge1" class="edge"><title>sourcefile~mod_domain.f90&#45;&gt;sourcefile~mod_time_integration.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M611.191,-338C626.14,-338 643.174,-338 659.749,-338"/>
+<polygon fill="#000000" stroke="#000000" points="659.987,-341.5 669.987,-338 659.987,-334.5 659.987,-341.5"/>
+</g>
+<!-- sourcefile~mod_spectrum.f90&#45;&gt;sourcefile~mod_domain.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge3" class="edge"><title>sourcefile~mod_spectrum.f90&#45;&gt;sourcefile~mod_domain.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M442.066,-309.677C462.721,-314.495 486.738,-320.096 507.934,-325.04"/>
+<polygon fill="#000000" stroke="#000000" points="507.235,-328.471 517.768,-327.334 508.825,-321.654 507.235,-328.471"/>
+</g>
+<!-- sourcefile~mod_spectrum.f90&#45;&gt;sourcefile~mod_time_integration.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge2" class="edge"><title>sourcefile~mod_spectrum.f90&#45;&gt;sourcefile~mod_time_integration.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M442.255,-300.116C491.341,-302.613 568.072,-307.662 634,-317 646.981,-318.839 660.792,-321.321 673.922,-323.934"/>
+<polygon fill="#000000" stroke="#000000" points="673.306,-327.38 683.804,-325.949 674.705,-320.522 673.306,-327.38"/>
+</g>
+<!-- sourcefile~mod_spectrum.f90&#45;&gt;sourcefile~mod_source_functions.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge4" class="edge"><title>sourcefile~mod_spectrum.f90&#45;&gt;sourcefile~mod_source_functions.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M442.066,-286.323C460.842,-281.943 482.397,-276.916 502.086,-272.324"/>
+<polygon fill="#000000" stroke="#000000" points="502.939,-275.719 511.883,-270.039 501.349,-268.902 502.939,-275.719"/>
+</g>
+<!-- sourcefile~mod_grid.f90&#45;&gt;sourcefile~mod_domain.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge5" class="edge"><title>sourcefile~mod_grid.f90&#45;&gt;sourcefile~mod_domain.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M429.213,-339.566C452.173,-339.298 482.055,-338.95 507.801,-338.65"/>
+<polygon fill="#000000" stroke="#000000" points="507.85,-342.149 517.809,-338.533 507.768,-335.15 507.85,-342.149"/>
+</g>
+<!-- sourcefile~mod_const.f90&#45;&gt;sourcefile~mod_domain.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge8" class="edge"><title>sourcefile~mod_const.f90&#45;&gt;sourcefile~mod_domain.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M392,-258C448.43,-264.102 506.799,-298.401 538.793,-320.061"/>
+<polygon fill="#000000" stroke="#000000" points="536.878,-322.992 547.093,-325.801 540.859,-317.234 536.878,-322.992"/>
+</g>
+<!-- sourcefile~mod_const.f90&#45;&gt;sourcefile~mod_spectrum.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge7" class="edge"><title>sourcefile~mod_const.f90&#45;&gt;sourcefile~mod_spectrum.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M253.222,-268.718C275.992,-273.593 304.798,-279.76 330.096,-285.175"/>
+<polygon fill="#000000" stroke="#000000" points="329.451,-288.617 339.962,-287.288 330.916,-281.772 329.451,-288.617"/>
+</g>
+<!-- sourcefile~mod_const.f90&#45;&gt;sourcefile~mod_source_functions.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge9" class="edge"><title>sourcefile~mod_const.f90&#45;&gt;sourcefile~mod_source_functions.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M253.168,-256.806C289.23,-254.624 343.275,-252.947 390,-258"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M392,-258C422.187,-261.264 455.538,-261.928 484.742,-261.545"/>
+<polygon fill="#000000" stroke="#000000" points="484.949,-265.042 494.886,-261.368 484.827,-258.043 484.949,-265.042"/>
+</g>
+<!-- sourcefile~mod_const.f90&#45;&gt;sourcefile~mod_spectral_shapes.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge6" class="edge"><title>sourcefile~mod_const.f90&#45;&gt;sourcefile~mod_spectral_shapes.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M250.433,-247.968C262.284,-243.888 275.312,-239.07 287,-234 312.379,-222.99 340.096,-208.297 360.379,-197.017"/>
+<polygon fill="#000000" stroke="#000000" points="362.133,-200.046 369.14,-192.1 358.707,-193.942 362.133,-200.046"/>
+</g>
+<!-- sourcefile~mod_utility.f90&#45;&gt;sourcefile~mod_spectrum.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge11" class="edge"><title>sourcefile~mod_utility.f90&#45;&gt;sourcefile~mod_spectrum.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M252.777,-330.47C275.533,-325.085 304.421,-318.25 329.816,-312.241"/>
+<polygon fill="#000000" stroke="#000000" points="330.796,-315.606 339.722,-309.897 329.184,-308.794 330.796,-315.606"/>
+</g>
+<!-- sourcefile~mod_utility.f90&#45;&gt;sourcefile~mod_grid.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge10" class="edge"><title>sourcefile~mod_utility.f90&#45;&gt;sourcefile~mod_grid.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M252.777,-340C279.443,-340 314.529,-340 342.548,-340"/>
+<polygon fill="#000000" stroke="#000000" points="342.908,-343.5 352.908,-340 342.908,-336.5 342.908,-343.5"/>
+</g>
+<!-- sourcefile~mod_nondimensional.f90&#45;&gt;sourcefile~mod_spectral_shapes.f90 -->
+<g id="sourcefile~~mod_precision.f90~~AfferentGraph_edge12" class="edge"><title>sourcefile~mod_nondimensional.f90&#45;&gt;sourcefile~mod_spectral_shapes.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M278.09,-180C289.395,-180 301.238,-180 312.815,-180"/>
+<polygon fill="#000000" stroke="#000000" points="312.899,-183.5 322.899,-180 312.899,-176.5 312.899,-183.5"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var pansourcefilemod_precisionf90AfferentGraph = svgPanZoom('#sourcefilemod_precisionf90AfferentGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="190pt" height="32pt"
+ viewBox="0.00 0.00 190.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 186,-28 186,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node"><title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="67,-24 0,-24 0,-0 67,-0 67,-24"/>
+<text text-anchor="middle" x="33.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="182,-24 85,-24 85,-0 182,-0 182,-24"/>
+<text text-anchor="middle" x="133.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which depends upon it. A file 
+    is dependent upon another if the latter must be compiled before the former
+    can be.
+    </p>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/mod_precision.html">mod_precision</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/mod_precision.f90.html#src">mod_precision.f90</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">!</span>
+<a name="ln-2"></a><span class="c">! wavy - A spectral ocean wave modeling and development framework</span>
+<a name="ln-3"></a><span class="c">! Copyright (c) 2017, Wavebit Scientific LLC</span>
+<a name="ln-4"></a><span class="c">! All rights reserved.</span>
+<a name="ln-5"></a><span class="c">!</span>
+<a name="ln-6"></a><span class="c">! Licensed under the BSD-3 clause license. See LICENSE for details.</span>
+<a name="ln-7"></a>
+<a name="ln-8"></a><span class="k">module </span><span class="n">mod_precision</span>
+<a name="ln-9"></a>
+<a name="ln-10"></a><span class="k">use </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="n">only</span><span class="p">:</span><span class="n">int16</span><span class="p">,</span><span class="n">int32</span><span class="p">,</span><span class="n">int64</span><span class="p">,</span><span class="n">real32</span><span class="p">,</span><span class="n">real64</span><span class="p">,</span><span class="n">real128</span>
+<a name="ln-11"></a>
+<a name="ln-12"></a><span class="k">implicit none</span>
+<a name="ln-13"></a>
+<a name="ln-14"></a><span class="k">private</span>
+<a name="ln-15"></a>
+<a name="ln-16"></a><span class="k">public</span> <span class="kd">::</span> <span class="n">intkind</span><span class="p">,</span><span class="n">realkind</span>
+<a name="ln-17"></a>
+<a name="ln-18"></a><span class="cp">#ifdef REAL64</span>
+<a name="ln-19"></a><span class="kt">integer</span><span class="p">,</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">realkind</span> <span class="o">=</span> <span class="n">real64</span>
+<a name="ln-20"></a><span class="cp">#elif REAL128</span>
+<a name="ln-21"></a><span class="kt">integer</span><span class="p">,</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">realkind</span> <span class="o">=</span> <span class="n">real128</span>
+<a name="ln-22"></a><span class="cp">#else</span>
+<a name="ln-23"></a><span class="kt">integer</span><span class="p">,</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">realkind</span> <span class="o">=</span> <span class="n">real32</span>
+<a name="ln-24"></a><span class="cp">#endif</span>
+<a name="ln-25"></a>
+<a name="ln-26"></a><span class="kt">integer</span><span class="p">,</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">intkind</span> <span class="o">=</span> <span class="n">int32</span>
+<a name="ln-27"></a>
+<a name="ln-28"></a><span class="n">endmodule</span> <span class="n">mod_precision</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-1">All Source Files</a></h3></div>
+  <div id="allfiles-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../sourcefile/mod_advection.f90.html">mod_advection.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_const.f90.html">mod_const.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_domain.f90.html">mod_domain.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_gravity.f90.html">mod_gravity.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_grid.f90.html">mod_grid.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_io.f90.html">mod_io.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_linear_wave_theory.f90.html">mod_linear_wave_theory.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_nondimensional.f90.html">mod_nondimensional.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_precision.f90.html">mod_precision.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_source_functions.f90.html">mod_source_functions.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_spectral_shapes.f90.html">mod_spectral_shapes.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_spectrum.f90.html">mod_spectrum.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_stokes.f90.html">mod_stokes.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_time_integration.f90.html">mod_time_integration.f90</a>
+      
+      <a class="list-group-item" href="../sourcefile/mod_utility.f90.html">mod_utility.f90</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> wavy was developed by Wavebit Scientific LLC</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

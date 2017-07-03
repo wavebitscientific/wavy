@@ -1,0 +1,3620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="A spectral ocean wave modeling framework">
+    
+    <meta name="author" content="Wavebit Scientific LLC" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>mod_utility &ndash; wavy</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">wavy </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>mod_utility 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 9.3% of total for modules and submodules.">250 statements</a>
+     </li> 
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/mod_utility.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/mod_utility.f90.html'>mod_utility.f90</a></li>
+  
+     <li class="active">mod_utility</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#inters-0">Interfaces</a></h3></div>
+  <div id="inters-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-diff">diff</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-diff_periodic">diff_periodic</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-ones">ones</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-range">range</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-tile">tile</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-zeros">zeros</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-diff_1d">diff_1d</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-diff_2d">diff_2d</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-diff_periodic_1d">diff_periodic_1d</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-diff_periodic_2d">diff_periodic_2d</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-ones_int">ones_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-ones_real">ones_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-range_int">range_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-range_real">range_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_1d_int">tile_1d_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_1d_real">tile_1d_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_2d_int">tile_2d_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_2d_real">tile_2d_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_3d_int">tile_3d_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_3d_real">tile_3d_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-zeros_int">zeros_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-zeros_real">zeros_real</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <hr>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-0">All Modules</a></h3></div>
+  <div id="allmods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/mod_advection.html">mod_advection</a>
+      
+      <a class="list-group-item" href="../module/mod_const.html">mod_const</a>
+      
+      <a class="list-group-item" href="../module/mod_domain.html">mod_domain</a>
+      
+      <a class="list-group-item" href="../module/mod_gravity.html">mod_gravity</a>
+      
+      <a class="list-group-item" href="../module/mod_grid.html">mod_grid</a>
+      
+      <a class="list-group-item" href="../module/mod_io.html">mod_io</a>
+      
+      <a class="list-group-item" href="../module/mod_linear_wave_theory.html">mod_linear_wave_theory</a>
+      
+      <a class="list-group-item" href="../module/mod_nondimensional.html">mod_nondimensional</a>
+      
+      <a class="list-group-item" href="../module/mod_precision.html">mod_precision</a>
+      
+      <a class="list-group-item" href="../module/mod_source_functions.html">mod_source_functions</a>
+      
+      <a class="list-group-item" href="../module/mod_spectral_shapes.html">mod_spectral_shapes</a>
+      
+      <a class="list-group-item" href="../module/mod_spectrum.html">mod_spectrum</a>
+      
+      <a class="list-group-item" href="../module/mod_stokes.html">mod_stokes</a>
+      
+      <a class="list-group-item" href="../module/mod_time_integration.html">mod_time_integration</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html">mod_utility</a>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>  
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      
+    
+  
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+      
+      <li><a href='../module/mod_precision.html'>mod_precision</a></li>
+      
+    </ul>
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: module~~mod_utility~~UsesGraph Pages: 1 -->
+<svg id="modulemod_utilityUsesGraph" width="313pt" height="32pt"
+ viewBox="0.00 0.00 313.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~mod_utility~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~mod_utility~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 309,-28 309,4 -4,4"/>
+<!-- module~mod_utility -->
+<g id="module~~mod_utility~~UsesGraph_node1" class="node"><title>module~mod_utility</title>
+<polygon fill="none" stroke="black" points="305,-24 241,-24 241,-0 305,-0 305,-24"/>
+<text text-anchor="middle" x="273" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">mod_utility</text>
+</g>
+<!-- module~mod_precision -->
+<g id="module~~mod_utility~~UsesGraph_node2" class="node"><title>module~mod_precision</title>
+<g id="a_module~~mod_utility~~UsesGraph_node2"><a xlink:href="../module/mod_precision.html" xlink:title="mod_precision">
+<polygon fill="#337ab7" stroke="#337ab7" points="205,-24 123,-24 123,-0 205,-0 205,-24"/>
+<text text-anchor="middle" x="164" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_precision</text>
+</a>
+</g>
+</g>
+<!-- module~mod_precision&#45;&gt;module~mod_utility -->
+<g id="module~~mod_utility~~UsesGraph_edge2" class="edge"><title>module~mod_precision&#45;&gt;module~mod_utility</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M205.147,-12C213.579,-12 222.483,-12 230.948,-12"/>
+<polygon fill="#000000" stroke="#000000" points="230.993,-15.5001 240.993,-12 230.993,-8.5001 230.993,-15.5001"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~mod_utility~~UsesGraph_node3" class="node"><title>iso_fortran_env</title>
+<g id="a_module~~mod_utility~~UsesGraph_node3"><a xlink:href="https://software.intel.com/en-us/node/511041" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="87,-24 0,-24 0,-0 87,-0 87,-24"/>
+<text text-anchor="middle" x="43.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~mod_precision -->
+<g id="module~~mod_utility~~UsesGraph_edge1" class="edge"><title>iso_fortran_env&#45;&gt;module~mod_precision</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M87.2812,-12C95.4821,-12 104.14,-12 112.556,-12"/>
+<polygon fill="#000000" stroke="#000000" points="112.654,-15.5001 122.654,-12 112.654,-8.5001 112.654,-15.5001"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,-0 139.5,-0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,-0 222,-0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,-0 294,-0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,-0 366,-0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,-0 481.5,-0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it.
+    </p>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    
+
+    
+    
+    
+    
+    <h3>Used By</h3>
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: module~~mod_utility~~UsedByGraph Pages: 1 -->
+<svg id="modulemod_utilityUsedByGraph" width="471pt" height="322pt"
+ viewBox="0.00 0.00 471.00 322.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~mod_utility~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 318)">
+<title>module~~mod_utility~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-318 467,-318 467,4 -4,4"/>
+<!-- module~mod_utility -->
+<g id="module~~mod_utility~~UsedByGraph_node1" class="node"><title>module~mod_utility</title>
+<polygon fill="none" stroke="black" points="64,-108 0,-108 0,-84 64,-84 64,-108"/>
+<text text-anchor="middle" x="32" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">mod_utility</text>
+</g>
+<!-- module~mod_spectrum -->
+<g id="module~~mod_utility~~UsedByGraph_node2" class="node"><title>module~mod_spectrum</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node2"><a xlink:href="../module/mod_spectrum.html" xlink:title="mod_spectrum">
+<polygon fill="#337ab7" stroke="#337ab7" points="184,-150 100,-150 100,-126 184,-126 184,-150"/>
+<text text-anchor="middle" x="142" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_spectrum</text>
+</a>
+</g>
+</g>
+<!-- module~mod_utility&#45;&gt;module~mod_spectrum -->
+<g id="module~~mod_utility~~UsedByGraph_edge11" class="edge"><title>module~mod_utility&#45;&gt;module~mod_spectrum</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M63.9485,-108.036C75.359,-112.473 88.4602,-117.568 100.584,-122.283"/>
+<polygon fill="#000000" stroke="#000000" points="99.4584,-125.6 110.047,-125.963 101.996,-119.076 99.4584,-125.6"/>
+</g>
+<!-- module~mod_grid -->
+<g id="module~~mod_utility~~UsedByGraph_node3" class="node"><title>module~mod_grid</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node3"><a xlink:href="../module/mod_grid.html" xlink:title="mod_grid">
+<polygon fill="#337ab7" stroke="#337ab7" points="171,-66 113,-66 113,-42 171,-42 171,-66"/>
+<text text-anchor="middle" x="142" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_grid</text>
+</a>
+</g>
+</g>
+<!-- module~mod_utility&#45;&gt;module~mod_grid -->
+<g id="module~~mod_utility~~UsedByGraph_edge12" class="edge"><title>module~mod_utility&#45;&gt;module~mod_grid</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M63.9485,-83.9645C76.2668,-79.174 90.5552,-73.6174 103.458,-68.5998"/>
+<polygon fill="#000000" stroke="#000000" points="104.947,-71.776 112.999,-64.8895 102.41,-65.252 104.947,-71.776"/>
+</g>
+<!-- proc~snl_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_node4" class="node"><title>proc~snl_dccm2012</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node4"><a xlink:href="../proc/snl_dccm2012.html" xlink:title="snl_DCCM2012">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="309.5,-314 221.5,-314 221.5,-290 309.5,-290 309.5,-314"/>
+<text text-anchor="middle" x="265.5" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">snl_DCCM2012</text>
+</a>
+</g>
+</g>
+<!-- module~mod_spectrum&#45;&gt;proc~snl_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_edge2" class="edge"><title>module~mod_spectrum&#45;&gt;proc~snl_dccm2012</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M146.697,-150.369C155.341,-177.396 179.285,-242.389 220,-281 221.236,-282.172 222.549,-283.289 223.92,-284.352"/>
+<polygon fill="#000000" stroke="#000000" points="221.996,-287.275 232.27,-289.864 225.853,-281.434 221.996,-287.275"/>
+</g>
+<!-- proc~sbf_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_node5" class="node"><title>proc~sbf_dccm2012</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node5"><a xlink:href="../proc/sbf_dccm2012.html" xlink:title="sbf_DCCM2012">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="309.5,-272 221.5,-272 221.5,-248 309.5,-248 309.5,-272"/>
+<text text-anchor="middle" x="265.5" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sbf_DCCM2012</text>
+</a>
+</g>
+</g>
+<!-- module~mod_spectrum&#45;&gt;proc~sbf_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_edge3" class="edge"><title>module~mod_spectrum&#45;&gt;proc~sbf_dccm2012</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M149.591,-150.074C161.352,-170.68 187.772,-212.929 220,-239 221.544,-240.249 223.175,-241.445 224.864,-242.586"/>
+<polygon fill="#000000" stroke="#000000" points="223.28,-245.717 233.661,-247.838 226.868,-239.706 223.28,-245.717"/>
+</g>
+<!-- proc~sin_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_node6" class="node"><title>proc~sin_dccm2012</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node6"><a xlink:href="../proc/sin_dccm2012.html" xlink:title="sin_DCCM2012">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="309.5,-230 221.5,-230 221.5,-206 309.5,-206 309.5,-230"/>
+<text text-anchor="middle" x="265.5" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sin_DCCM2012</text>
+</a>
+</g>
+</g>
+<!-- module~mod_spectrum&#45;&gt;proc~sin_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_edge4" class="edge"><title>module~mod_spectrum&#45;&gt;proc~sin_dccm2012</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M159.551,-150.205C174.962,-161.425 198.696,-178.339 220,-192 224.498,-194.884 229.319,-197.838 234.068,-200.671"/>
+<polygon fill="#000000" stroke="#000000" points="232.611,-203.875 243.006,-205.922 236.157,-197.839 232.611,-203.875"/>
+</g>
+<!-- module~mod_time_integration -->
+<g id="module~~mod_utility~~UsedByGraph_node7" class="node"><title>module~mod_time_integration</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node7"><a xlink:href="../module/mod_time_integration.html" xlink:title="mod_time_integration">
+<polygon fill="#337ab7" stroke="#337ab7" points="463,-107 347,-107 347,-83 463,-83 463,-107"/>
+<text text-anchor="middle" x="405" y="-92.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_time_integration</text>
+</a>
+</g>
+</g>
+<!-- module~mod_spectrum&#45;&gt;module~mod_time_integration -->
+<g id="module~~mod_utility~~UsedByGraph_edge5" class="edge"><title>module~mod_spectrum&#45;&gt;module~mod_time_integration</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M175.608,-150.032C209.99,-160.895 265.388,-173.178 311,-159 339.148,-150.251 366.319,-129.694 383.948,-114.222"/>
+<polygon fill="#000000" stroke="#000000" points="386.737,-116.418 391.797,-107.109 382.037,-111.23 386.737,-116.418"/>
+</g>
+<!-- proc~sdt_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_node8" class="node"><title>proc~sdt_dccm2012</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node8"><a xlink:href="../proc/sdt_dccm2012.html" xlink:title="sdt_DCCM2012">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="309.5,-150 221.5,-150 221.5,-126 309.5,-126 309.5,-150"/>
+<text text-anchor="middle" x="265.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sdt_DCCM2012</text>
+</a>
+</g>
+</g>
+<!-- module~mod_spectrum&#45;&gt;proc~sdt_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_edge6" class="edge"><title>module~mod_spectrum&#45;&gt;proc~sdt_dccm2012</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M184.134,-138C192.838,-138 202.143,-138 211.222,-138"/>
+<polygon fill="#000000" stroke="#000000" points="211.332,-141.5 221.332,-138 211.332,-134.5 211.332,-141.5"/>
+</g>
+<!-- module~mod_domain -->
+<g id="module~~mod_utility~~UsedByGraph_node9" class="node"><title>module~mod_domain</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node9"><a xlink:href="../module/mod_domain.html" xlink:title="mod_domain">
+<polygon fill="#337ab7" stroke="#337ab7" points="303,-24 228,-24 228,-0 303,-0 303,-24"/>
+<text text-anchor="middle" x="265.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mod_domain</text>
+</a>
+</g>
+</g>
+<!-- module~mod_spectrum&#45;&gt;module~mod_domain -->
+<g id="module~~mod_utility~~UsedByGraph_edge7" class="edge"><title>module~mod_spectrum&#45;&gt;module~mod_domain</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M150.89,-125.723C166.852,-101.155 202.907,-47.0927 220,-33 221.532,-31.7365 223.154,-30.5293 224.835,-29.3786"/>
+<polygon fill="#000000" stroke="#000000" points="226.845,-32.2535 233.607,-24.0966 223.234,-26.2567 226.845,-32.2535"/>
+</g>
+<!-- proc~sbf_jonswap -->
+<g id="module~~mod_utility~~UsedByGraph_node10" class="node"><title>proc~sbf_jonswap</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node10"><a xlink:href="../proc/sbf_jonswap.html" xlink:title="sbf_JONSWAP">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="307.5,-108 223.5,-108 223.5,-84 307.5,-84 307.5,-108"/>
+<text text-anchor="middle" x="265.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sbf_JONSWAP</text>
+</a>
+</g>
+</g>
+<!-- module~mod_spectrum&#45;&gt;proc~sbf_jonswap -->
+<g id="module~~mod_utility~~UsedByGraph_edge8" class="edge"><title>module~mod_spectrum&#45;&gt;proc~sbf_jonswap</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M177.817,-125.964C190.908,-121.439 205.977,-116.23 219.841,-111.438"/>
+<polygon fill="#000000" stroke="#000000" points="221.37,-114.612 229.678,-108.037 219.083,-107.996 221.37,-114.612"/>
+</g>
+<!-- proc~sds_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_node11" class="node"><title>proc~sds_dccm2012</title>
+<g id="a_module~~mod_utility~~UsedByGraph_node11"><a xlink:href="../proc/sds_dccm2012.html" xlink:title="sds_DCCM2012">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-66 220,-66 220,-42 311,-42 311,-66"/>
+<text text-anchor="middle" x="265.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sds_DCCM2012</text>
+</a>
+</g>
+</g>
+<!-- module~mod_spectrum&#45;&gt;proc~sds_dccm2012 -->
+<g id="module~~mod_utility~~UsedByGraph_edge9" class="edge"><title>module~mod_spectrum&#45;&gt;proc~sds_dccm2012</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M155.871,-125.792C170.579,-112.255 195.758,-90.311 220,-75 222.291,-73.553 224.697,-72.1423 227.155,-70.7809"/>
+<polygon fill="#000000" stroke="#000000" points="228.913,-73.8117 236.169,-66.0911 225.682,-67.602 228.913,-73.8117"/>
+</g>
+<!-- module~mod_grid&#45;&gt;module~mod_domain -->
+<g id="module~~mod_utility~~UsedByGraph_edge10" class="edge"><title>module~mod_grid&#45;&gt;module~mod_domain</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M171.18,-44.2588C185.577,-39.282 203.439,-33.1073 219.67,-27.4966"/>
+<polygon fill="#000000" stroke="#000000" points="221.212,-30.6669 229.52,-24.0918 218.925,-24.051 221.212,-30.6669"/>
+</g>
+<!-- module~mod_domain&#45;&gt;module~mod_time_integration -->
+<g id="module~~mod_utility~~UsedByGraph_edge1" class="edge"><title>module~mod_domain&#45;&gt;module~mod_time_integration</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M293.65,-24.0336C299.457,-26.8223 305.497,-29.8893 311,-33 334.809,-46.4574 360.59,-63.8889 378.955,-76.8398"/>
+<polygon fill="#000000" stroke="#000000" points="377.157,-79.8557 387.334,-82.8006 381.215,-74.1518 377.157,-79.8557"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,-0 139.5,-0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,-0 222,-0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,-0 294,-0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,-0 366,-0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,-0 481.5,-0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it.
+    </p>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    <br>
+    
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#inters-1">Interfaces</a></h3></div>
+  <div id="inters-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-diff">diff</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-diff_periodic">diff_periodic</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-ones">ones</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-range">range</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-tile">tile</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#interface-zeros">zeros</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-diff_1d">diff_1d</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-diff_2d">diff_2d</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-diff_periodic_1d">diff_periodic_1d</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-diff_periodic_2d">diff_periodic_2d</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-ones_int">ones_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-ones_real">ones_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-range_int">range_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-range_real">range_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_1d_int">tile_1d_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_1d_real">tile_1d_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_2d_int">tile_2d_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_2d_real">tile_2d_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_3d_int">tile_3d_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-tile_3d_real">tile_3d_real</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-zeros_int">zeros_int</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html#proc-zeros_real">zeros_real</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+    <section>
+	 <h2>Interfaces</h2>
+	 
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-diff"></span><h3>public interface <a href='../interface/diff.html'>diff</a>
+    
+  </h3></div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/diff_1d.html'>diff_1d</a>(x) result(dx)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns a centered-difference of a 1-d array, with first order
+ differencing applied for the boundary points. This procedure is overloaded
+ by the generic procedure <code>diff</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/diff_2d.html'>diff_2d</a>(x, dim) result(dx)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns a centered-difference of a 2-d array along dimension dim, with
+ first order differencing applied for the boundary points. This procedure is
+ overloaded by the generic procedure <code>diff</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dim</strong></td><td><p>Dimension along which to differentiate</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-diff_periodic"></span><h3>public interface <a href='../interface/diff_periodic.html'>diff_periodic</a>
+    
+  </h3></div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/diff_periodic_1d.html'>diff_periodic_1d</a>(x) result(dx)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns a centered-difference of a 1-d array with periodic boundary
+ conditions. This procedure is overloaded by the generic procedure <code>diff</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/diff_periodic_2d.html'>diff_periodic_2d</a>(x, dim) result(dx)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns a centered-difference of a 2-d array along dimension dim, with
+ periodic boundary conditions. This procedure is overloaded by the generic
+ procedure <code>diff</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dim</strong></td><td><p>Dimension along which to differentiate</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-ones"></span><h3>public interface <a href='../interface/ones.html'>ones</a>
+    
+  </h3></div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/ones_int.html'>ones_int</a>(length, kindflag) result(ones)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns a 1-d array of integer ones. This procedure is overloaded by the
+ generic procedure <code>ones</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td><p>Array length</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kindflag</strong></td><td><p>Array type</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/ones_real.html'>ones_real</a>(length, kindflag) result(ones)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns a 1-d array of floating-point ones. This procedure is overloaded by
+ the generic procedure <code>ones</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td><p>Array length</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kindflag</strong></td><td><p>Array type</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-range"></span><h3>public interface <a href='../interface/range.html'>range</a>
+    
+  </h3></div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/range_int.html'>range_int</a>(start, end, increment) result(range)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns an array of integers given start, end, and increment values. If the
+ increment argument is not passed, default increment is 1. This procedure is
+ overloaded by the generic procedure <code>range</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>start</strong></td><td><p>Start value of the array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>end</strong></td><td><p>End value of the array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>increment</strong></td><td><p>Array increment</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/range_real.html'>range_real</a>(start, end, increment) result(range)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns an array of reals given start, end, and increment values. If the
+ increment argument is not passed, default increment is 1. This procedure is
+ overloaded by the generic procedure <code>range</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>start</strong></td><td><p>Start value of the array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>end</strong></td><td><p>End value of the array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>increment</strong></td><td><p>Array increment</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-tile"></span><h3>public interface <a href='../interface/tile.html'>tile</a>
+    
+  </h3></div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/tile_1d_int.html'>tile_1d_int</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 1-d input array of integers. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:,:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/tile_1d_real.html'>tile_1d_real</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 1-d input array of reals. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/tile_2d_int.html'>tile_2d_int</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 2-d input array of integers. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:,:,:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/tile_2d_real.html'>tile_2d_real</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 2-d input array of reals. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:,:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/tile_3d_int.html'>tile_3d_int</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 3-d input array of integers. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:,:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:,:,:,:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/tile_3d_real.html'>tile_3d_real</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 3-d input array of reals. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:,:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:,:,:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-zeros"></span><h3>public interface <a href='../interface/zeros.html'>zeros</a>
+    
+  </h3></div>
+  
+  <ul class="list-group">
+  
+  
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/zeros_int.html'>zeros_int</a>(length, kindflag) result(zeros)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns a 1-d array of integer zeros. This procedure is overloaded by the
+ generic procedure <code>zeros</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td><p>Array length</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kindflag</strong></td><td><p>Array type</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+    <li class="list-group-item">
+    
+    
+    <h3>
+private pure function <a href='../proc/zeros_real.html'>zeros_real</a>(length, kindflag) result(zeros)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>Returns a 1-d array of floating-point zeros. This procedure is overloaded by
+ the generic procedure <code>zeros</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td><p>Array length</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kindflag</strong></td><td><p>Array type</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+    </li>
+  
+  
+  </ul>
+</div>
+
+    
+    </section>
+	<br>
+    
+
+    
+    
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-diff_1d"></span><h3>
+private pure function <a href='../proc/diff_1d.html'>diff_1d</a>(x) result(dx)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a centered-difference of a 1-d array, with first order
+ differencing applied for the boundary points. This procedure is overloaded
+ by the generic procedure <code>diff</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-diff_2d"></span><h3>
+private pure function <a href='../proc/diff_2d.html'>diff_2d</a>(x, dim) result(dx)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a centered-difference of a 2-d array along dimension dim, with
+ first order differencing applied for the boundary points. This procedure is
+ overloaded by the generic procedure <code>diff</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dim</strong></td><td><p>Dimension along which to differentiate</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-diff_periodic_1d"></span><h3>
+private pure function <a href='../proc/diff_periodic_1d.html'>diff_periodic_1d</a>(x) result(dx)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a centered-difference of a 1-d array with periodic boundary
+ conditions. This procedure is overloaded by the generic procedure <code>diff</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-diff_periodic_2d"></span><h3>
+private pure function <a href='../proc/diff_periodic_2d.html'>diff_periodic_2d</a>(x, dim) result(dx)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a centered-difference of a 2-d array along dimension dim, with
+ periodic boundary conditions. This procedure is overloaded by the generic
+ procedure <code>diff</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>dim</strong></td><td><p>Dimension along which to differentiate</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ones_int"></span><h3>
+private pure function <a href='../proc/ones_int.html'>ones_int</a>(length, kindflag) result(ones)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a 1-d array of integer ones. This procedure is overloaded by the
+ generic procedure <code>ones</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td><p>Array length</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kindflag</strong></td><td><p>Array type</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ones_real"></span><h3>
+private pure function <a href='../proc/ones_real.html'>ones_real</a>(length, kindflag) result(ones)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a 1-d array of floating-point ones. This procedure is overloaded by
+ the generic procedure <code>ones</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td><p>Array length</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kindflag</strong></td><td><p>Array type</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-range_int"></span><h3>
+private pure function <a href='../proc/range_int.html'>range_int</a>(start, end, increment) result(range)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns an array of integers given start, end, and increment values. If the
+ increment argument is not passed, default increment is 1. This procedure is
+ overloaded by the generic procedure <code>range</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>start</strong></td><td><p>Start value of the array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>end</strong></td><td><p>End value of the array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>increment</strong></td><td><p>Array increment</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-range_real"></span><h3>
+private pure function <a href='../proc/range_real.html'>range_real</a>(start, end, increment) result(range)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns an array of reals given start, end, and increment values. If the
+ increment argument is not passed, default increment is 1. This procedure is
+ overloaded by the generic procedure <code>range</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>start</strong></td><td><p>Start value of the array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>end</strong></td><td><p>End value of the array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>increment</strong></td><td><p>Array increment</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-tile_1d_int"></span><h3>
+private pure function <a href='../proc/tile_1d_int.html'>tile_1d_int</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 1-d input array of integers. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:,:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-tile_1d_real"></span><h3>
+private pure function <a href='../proc/tile_1d_real.html'>tile_1d_real</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 1-d input array of reals. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-tile_2d_int"></span><h3>
+private pure function <a href='../proc/tile_2d_int.html'>tile_2d_int</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 2-d input array of integers. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:,:,:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-tile_2d_real"></span><h3>
+private pure function <a href='../proc/tile_2d_real.html'>tile_2d_real</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 2-d input array of reals. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:,:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-tile_3d_int"></span><h3>
+private pure function <a href='../proc/tile_3d_int.html'>tile_3d_int</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 3-d input array of integers. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:,:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:,:,:,:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-tile_3d_real"></span><h3>
+private pure function <a href='../proc/tile_3d_real.html'>tile_3d_real</a>(array, n) result(tiled_array)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Tiles the input array <code>n</code> times. Returns a tiled array that has rank equal
+ to <code>size(shape(array))+1</code> and that has values equal to values of <code>array</code>,
+ repeated <code>n</code> times. This version is for 3-d input array of reals. This
+ procedure is overloaded by the generic procedure <code>tile</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:,:)</td><td>::</td>
+  <td><strong>array</strong></td><td><p>Input array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>Number of times to copy input array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:,:,:,:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-zeros_int"></span><h3>
+private pure function <a href='../proc/zeros_int.html'>zeros_int</a>(length, kindflag) result(zeros)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a 1-d array of integer zeros. This procedure is overloaded by the
+ generic procedure <code>zeros</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td><p>Array length</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kindflag</strong></td><td><p>Array type</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer(kind=ik),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-zeros_real"></span><h3>
+private pure function <a href='../proc/zeros_real.html'>zeros_real</a>(length, kindflag) result(zeros)
+    
+    
+	 
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a 1-d array of floating-point zeros. This procedure is overloaded by
+ the generic procedure <code>zeros</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ik),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>length</strong></td><td><p>Array length</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rk),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>kindflag</strong></td><td><p>Array type</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=rk),
+  dimension(:), allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+    
+    
+    
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-1">All Modules</a></h3></div>
+  <div id="allmods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/mod_advection.html">mod_advection</a>
+      
+      <a class="list-group-item" href="../module/mod_const.html">mod_const</a>
+      
+      <a class="list-group-item" href="../module/mod_domain.html">mod_domain</a>
+      
+      <a class="list-group-item" href="../module/mod_gravity.html">mod_gravity</a>
+      
+      <a class="list-group-item" href="../module/mod_grid.html">mod_grid</a>
+      
+      <a class="list-group-item" href="../module/mod_io.html">mod_io</a>
+      
+      <a class="list-group-item" href="../module/mod_linear_wave_theory.html">mod_linear_wave_theory</a>
+      
+      <a class="list-group-item" href="../module/mod_nondimensional.html">mod_nondimensional</a>
+      
+      <a class="list-group-item" href="../module/mod_precision.html">mod_precision</a>
+      
+      <a class="list-group-item" href="../module/mod_source_functions.html">mod_source_functions</a>
+      
+      <a class="list-group-item" href="../module/mod_spectral_shapes.html">mod_spectral_shapes</a>
+      
+      <a class="list-group-item" href="../module/mod_spectrum.html">mod_spectrum</a>
+      
+      <a class="list-group-item" href="../module/mod_stokes.html">mod_stokes</a>
+      
+      <a class="list-group-item" href="../module/mod_time_integration.html">mod_time_integration</a>
+      
+      <a class="list-group-item" href="../module/mod_utility.html">mod_utility</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> wavy was developed by Wavebit Scientific LLC</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
