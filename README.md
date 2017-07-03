@@ -4,6 +4,7 @@ A spectral ocean wave modeling framework.
 
 * [Getting started](#getting-started)
   - [Building wavy](#building-wavy)
+  - [Building a simple program with wavy](#building-a-simple-program-with-wavy)
   - [Examples](#examples)
 * [Design principles](#design-principles)
 * [Features](#features)
@@ -36,6 +37,17 @@ FC=gfortran cmake .. -DREAL=128 # for quad precision
 ```
 
 wavy needs gcc-6.3.0 or later to succesfully build and pass all tests.
+
+#### Building a simple program with wavy
+
+If you compiled wavy in `wavy/build`, then the module files and the library
+are located in `wavy/build/include` and `wavy/build/lib`, respectively. 
+For example, if we want to build a simple wavy hello world program from
+the base directory, we could do it like this: 
+
+```
+gfortran hello.f90 -o hello -Ibuild/include -Lbuild/lib -lwavy
+```
 
 #### Examples
 
